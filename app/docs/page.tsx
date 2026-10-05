@@ -102,7 +102,7 @@ export default function DocsPage() {
 
             <section id="contracts" className="scroll-mt-28">
               <h2 className="text-2xl font-bold">Contract Model</h2>
-              <p className="mt-3 text-[15px] text-neutral-300">The unaudited testnet prototype routes a native ETH transfer through an agent registry and fixed policy limits. It is restricted to one operator and one receiver.</p>
+              <p className="mt-3 text-[15px] text-neutral-300">The unaudited testnet prototype routes native ETH transfers through an agent registry and fixed policy limits. It is restricted to one operator and one receiver. The first policy-approved test transfer is confirmed onchain.</p>
               <Code>{`Robinhood Chain Testnet · Chain ID 46630\nArvynRouter    0xbe8900130fC645BF375200639dB3249912Afe1ee\nPolicyGuard    0x06CCeDd7480dd8858b29a5AFd5E28d5D3e61F37c\nAgentRegistry  0x25471e32C4037fD877Bb1D993CD8FB8B028925F8`}</Code>
               <a
                 href="https://explorer.testnet.chain.robinhood.com/tx/0xeee581003afb3a707350522839cf758891283859039dfd51d91928b02dbd8531"
@@ -111,6 +111,14 @@ export default function DocsPage() {
                 className="mt-4 inline-flex text-sm font-semibold text-arvyn-orange transition hover:text-white"
               >
                 View deployment transaction ↗
+              </a>
+              <a
+                href="https://explorer.testnet.chain.robinhood.com/tx/0xb0e1dbd8a46ff45cca86bba11f7ba9d19933685fa1eb7db197bac60a5a47afe2"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="ml-5 mt-4 inline-flex text-sm font-semibold text-arvyn-orange transition hover:text-white"
+              >
+                View first execution ↗
               </a>
             </section>
 

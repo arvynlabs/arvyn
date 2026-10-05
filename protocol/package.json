@@ -11,8 +11,11 @@
     "network:check": "node scripts/check-network.js",
     "deployment:estimate": "node scripts/estimate-deployment.js",
     "deployment:verify": "node scripts/verify-deployment.js",
+    "execution:verify": "node scripts/verify-execution.js",
     "deploy:ui": "vite --host 127.0.0.1 --port 4173 --strictPort",
-    "deploy:ui:build": "vite build --outDir cache/deploy-ui"
+    "deploy:ui:build": "vite build --outDir cache/deploy-ui",
+    "execute:ui": "vite --host 127.0.0.1 --port 4173 --strictPort",
+    "wallet:ui:build": "vite build --outDir cache/wallet-ui"
   },
   "dependencies": {
     "@openzeppelin/contracts": "5.6.1"

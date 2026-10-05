@@ -60,6 +60,14 @@ all four contract addresses are recorded in
 - [PolicyGuard](https://explorer.testnet.chain.robinhood.com/address/0x06CCeDd7480dd8858b29a5AFd5E28d5D3e61F37c)
 - [AgentRegistry](https://explorer.testnet.chain.robinhood.com/address/0x25471e32C4037fD877Bb1D993CD8FB8B028925F8)
 
+The first policy-approved execution transferred `0.0001 testnet ETH` from the
+registered operator through `ArvynRouter` to the allowlisted receiver. The
+transaction emitted both `PolicyConsumed` and `TransferExecuted`, advanced the
+operator nonce from `0` to `1`, and reduced the daily allowance from `0.003` to
+`0.0029 testnet ETH`.
+
+- [First execution transaction](https://explorer.testnet.chain.robinhood.com/tx/0xb0e1dbd8a46ff45cca86bba11f7ba9d19933685fa1eb7db197bac60a5a47afe2)
+
 The exact unsigned configuration is stored in
 `deployments/robinhood-testnet.plan.json`. Run `npm run network:check` to confirm
 the chain ID and inspect the public account balances without signing a
@@ -67,7 +75,8 @@ transaction. After compiling, `npm run deployment:estimate` checks the complete
 constructor transaction against the public RPC and confirms that the deployer
 has enough testnet ETH. Run `npm run deployment:verify` to compare the deployed
 owners, links, agent status, receiver, limits and bytecode presence with the
-saved manifest.
+saved manifest. Run `npm run execution:verify` to verify the recorded execution
+receipt and emitted policy events.
 
 For a MetaMask deployment without exporting a private key, compile the
 contracts and start the local deployment page:
@@ -81,5 +90,10 @@ Open `http://127.0.0.1:4173/deploy-ui/` in the browser where MetaMask is
 installed. The page validates the network and account and estimates gas before
 enabling the deployment request. The wallet owner must inspect and confirm the
 transaction personally.
+
+After deployment, start the same local server with `npm run execute:ui` and open
+`http://127.0.0.1:4173/execute-ui/`. The execution page reads and simulates the
+live policy before it can request the fixed `0.0001 testnet ETH` transfer. The
+wallet owner must inspect and confirm that transaction personally as well.
 
 This prototype has not been independently audited. It must not be used with valuable assets or on mainnet.

@@ -39,5 +39,19 @@
     "blockNumber": 129308135,
     "confirmedAt": "2026-10-05T14:05:59.000Z",
     "gasUsed": "2095200"
-  }
+  },
+  "validationExecutions": [
+    {
+      "kind": "native_eth_transfer",
+      "hash": "0xb0e1dbd8a46ff45cca86bba11f7ba9d19933685fa1eb7db197bac60a5a47afe2",
+      "blockNumber": 129316768,
+      "confirmedAt": "2026-10-05T14:29:29.000Z",
+      "operator": "0xE901B4e664B863111351617579F7422d56aCa88c",
+      "receiver": "0x0b93203D236B4Cf6905650F51a28be8845d5ec86",
+      "amountWei": "100000000000000",
+      "nonce": "0",
+      "gasUsed": "122474",
+      "remainingDailyLimitAfterWei": "2900000000000000"
+    }
+  ]
 }

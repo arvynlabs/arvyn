@@ -9,7 +9,10 @@ export default defineConfig({
   },
   build: {
     rollupOptions: {
-      input: resolve(process.cwd(), "deploy-ui/index.html"),
+      input: {
+        deploy: resolve(process.cwd(), "deploy-ui/index.html"),
+        execute: resolve(process.cwd(), "execute-ui/index.html"),
+      },
     },
   },
 });

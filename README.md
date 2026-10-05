@@ -16,7 +16,7 @@ The dashboard, transaction hashes, block numbers, process activity, and network 
 | Product and architecture preview | Public API and data streams |
 | Interactive dashboard demo | Production policy and routing contracts |
 | Testnet contract source and local tests | Audited mainnet deployment |
-| Verifiable testnet prototype | Live protocol telemetry |
+| Verifiable testnet prototype and execution | Live protocol telemetry |
 
 Examples in the documentation describe the intended developer experience. Package names, endpoints, and contract addresses shown there are illustrative and should not be used in production.
 

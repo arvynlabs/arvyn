@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex,nofollow" />
+    <title>ARVYN Testnet Execution</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="../deploy-ui/styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <header class="brand">
+        <div class="mark" aria-hidden="true">A</div>
+        <div>
+          <strong>ARVYN</strong>
+          <span>Local testnet execution</span>
+        </div>
+      </header>
+
+      <section class="hero">
+        <p class="eyebrow">FIRST POLICY-CHECKED EXECUTION</p>
+        <h1>Test the live execution path.</h1>
+        <p class="intro">
+          Send a fixed amount of testnet ETH through ArvynRouter. The deployed
+          policy verifies the operator, receiver, transfer limit, daily limit,
+          nonce and deadline before execution.
+        </p>
+      </section>
+
+      <section class="panel">
+        <div class="status-line">
+          <span id="statusDot" class="dot"></span>
+          <span id="statusText">Wallet not connected</span>
+        </div>
+
+        <dl class="details">
+          <div>
+            <dt>Network</dt>
+            <dd>Robinhood Chain Testnet · 46630</dd>
+          </div>
+          <div>
+            <dt>ArvynRouter</dt>
+            <dd id="routerAddress"></dd>
+          </div>
+          <div>
+            <dt>Operator</dt>
+            <dd id="operatorAddress"></dd>
+          </div>
+          <div>
+            <dt>Allowed receiver</dt>
+            <dd id="receiverAddress"></dd>
+          </div>
+          <div>
+            <dt>Test transfer</dt>
+            <dd>0.0001 testnet ETH</dd>
+          </div>
+          <div>
+            <dt>Remaining daily allowance</dt>
+            <dd id="remainingAllowance">Connect the wallet to verify</dd>
+          </div>
+          <div>
+            <dt>Next execution nonce</dt>
+            <dd id="nextNonce">Connect the wallet to verify</dd>
+          </div>
+          <div>
+            <dt>Estimated network fee</dt>
+            <dd id="feeEstimate">Connect the wallet to estimate</dd>
+          </div>
+        </dl>
+
+        <div id="warning" class="warning" hidden></div>
+
+        <div class="actions">
+          <button id="connectButton" class="button primary">Connect MetaMask</button>
+          <button id="switchButton" class="button secondary" hidden>Switch network</button>
+          <button id="executeButton" class="button primary" disabled>
+            Request test transfer
+          </button>
+        </div>
+
+        <p class="fine-print">
+          The request transfers only testnet ETH to the fixed Receiver. MetaMask
+          will show the value and network fee before anything is submitted. This
+          prototype is unaudited and must not be used with valuable assets.
+        </p>
+      </section>
+
+      <section id="result" class="panel result" hidden>
+        <p class="eyebrow">EXECUTION CONFIRMED</p>
+        <h2>The policy-approved transfer succeeded.</h2>
+        <dl class="details">
+          <div>
+            <dt>Transferred</dt>
+            <dd>0.0001 testnet ETH</dd>
+          </div>
+          <div>
+            <dt>Receiver balance change</dt>
+            <dd id="balanceChange"></dd>
+          </div>
+          <div>
+            <dt>Remaining daily allowance</dt>
+            <dd id="remainingAfter"></dd>
+          </div>
+        </dl>
+        <a id="transactionLink" class="button secondary" target="_blank" rel="noopener noreferrer">
+          View execution in explorer
+        </a>
+      </section>
+    </main>
+
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
