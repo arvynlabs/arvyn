@@ -60,7 +60,7 @@ export default function DocsPage() {
               Explore the planned developer interface for agents, chain data, policy checks, and transaction routing.
             </p>
             <div className="mt-6 rounded-xl border border-arvyn-orange/30 bg-arvyn-orange/[0.06] p-5 text-sm leading-relaxed text-neutral-300">
-              <strong className="text-white">Development status:</strong> The SDK and API described below are planned. A narrow contract prototype is available in the GitHub repository for local testing, but no ARVYN contracts are deployed. Code samples are illustrative only.
+              <strong className="text-white">Development status:</strong> The SDK and API described below are planned. An unaudited, policy-limited prototype is deployed on Robinhood Chain Testnet. It is not a production or mainnet release. Code samples are illustrative only.
             </div>
           </Reveal>
 
@@ -71,7 +71,7 @@ export default function DocsPage() {
                 ARVYN provides a standard execution path for on-chain agents. Agents read blockchain
                 state, prepare actions, pass policy checks, and submit transactions through smart contracts.
               </p>
-              <Code>{`Status: interface and contract prototype\nSDK package: not published\nPublic API: not available\nContracts: source available, not deployed`}</Code>
+              <Code>{`Status: interface and testnet contract prototype\nSDK package: not published\nPublic API: not available\nContracts: deployed on Robinhood Chain Testnet`}</Code>
             </section>
 
             <section id="architecture" className="scroll-mt-28">
@@ -102,8 +102,16 @@ export default function DocsPage() {
 
             <section id="contracts" className="scroll-mt-28">
               <h2 className="text-2xl font-bold">Contract Model</h2>
-              <p className="mt-3 text-[15px] text-neutral-300">The testnet prototype routes a native ETH transfer through an agent registry and fixed policy limits. It remains undeployed and unaudited.</p>
-              <Code>{`Prototype source is available. No addresses are deployed.\nArvynRouter    non-custodial execution entrypoint\nPolicyGuard    receiver and spend limits\nAgentRegistry  operator and active status`}</Code>
+              <p className="mt-3 text-[15px] text-neutral-300">The unaudited testnet prototype routes a native ETH transfer through an agent registry and fixed policy limits. It is restricted to one operator and one receiver.</p>
+              <Code>{`Robinhood Chain Testnet · Chain ID 46630\nArvynRouter    0xbe8900130fC645BF375200639dB3249912Afe1ee\nPolicyGuard    0x06CCeDd7480dd8858b29a5AFd5E28d5D3e61F37c\nAgentRegistry  0x25471e32C4037fD877Bb1D993CD8FB8B028925F8`}</Code>
+              <a
+                href="https://explorer.testnet.chain.robinhood.com/tx/0xeee581003afb3a707350522839cf758891283859039dfd51d91928b02dbd8531"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-4 inline-flex text-sm font-semibold text-arvyn-orange transition hover:text-white"
+              >
+                View deployment transaction ↗
+              </a>
             </section>
 
             <section id="examples" className="scroll-mt-28">

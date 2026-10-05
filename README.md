@@ -6,7 +6,7 @@ ARVYN is an early-stage product concept for controlled AI-agent execution on Rob
 
 ## Current status
 
-This repository contains the public ARVYN website, an interactive product preview, and an isolated smart-contract prototype for local and testnet validation. No ARVYN contracts are deployed yet. There is no published SDK, public API, live protocol, or token contract.
+This repository contains the public ARVYN website, an interactive product preview, and an unaudited smart-contract prototype deployed on Robinhood Chain Testnet. There is no published SDK, public API, mainnet protocol, or token contract.
 
 The dashboard, transaction hashes, block numbers, process activity, and network metrics are generated in the browser for interface demonstration. They are not live blockchain telemetry.
 
@@ -14,8 +14,9 @@ The dashboard, transaction hashes, block numbers, process activity, and network 
 | --- | --- |
 | Public website | TypeScript SDK |
 | Product and architecture preview | Public API and data streams |
-| Interactive dashboard demo | Deployed policy and routing contracts |
-| Testnet contract source and local tests | Verifiable testnet deployment |
+| Interactive dashboard demo | Production policy and routing contracts |
+| Testnet contract source and local tests | Audited mainnet deployment |
+| Verifiable testnet prototype | Live protocol telemetry |
 
 Examples in the documentation describe the intended developer experience. Package names, endpoints, and contract addresses shown there are illustrative and should not be used in production.
 
@@ -62,8 +63,11 @@ components/          shared interface components
 components/network/  dashboard preview components
 lib/                 navigation, content, and demo telemetry
 public/              brand assets
-protocol/            undeployed contracts, tests, and testnet notes
+protocol/            testnet contracts, tests, and deployment records
 ```
+
+The confirmed Robinhood Chain Testnet addresses and transaction are recorded in
+[`protocol/deployments/robinhood-testnet.plan.json`](protocol/deployments/robinhood-testnet.plan.json).
 
 ## License
 

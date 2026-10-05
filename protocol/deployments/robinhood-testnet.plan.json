@@ -1,5 +1,5 @@
 {
-  "status": "not_deployed",
+  "status": "deployed_testnet",
   "network": {
     "name": "Robinhood Chain Testnet",
     "chainId": 46630,
@@ -29,10 +29,15 @@
     ]
   },
   "contracts": {
-    "bootstrap": null,
-    "agentRegistry": null,
-    "policyGuard": null,
-    "arvynRouter": null
+    "bootstrap": "0xE45bd06Ceddc97Bb7F721B464Aa9C611a4A6bB63",
+    "agentRegistry": "0x25471e32C4037fD877Bb1D993CD8FB8B028925F8",
+    "policyGuard": "0x06CCeDd7480dd8858b29a5AFd5E28d5D3e61F37c",
+    "arvynRouter": "0xbe8900130fC645BF375200639dB3249912Afe1ee"
   },
-  "deploymentTransaction": null
+  "deploymentTransaction": {
+    "hash": "0xeee581003afb3a707350522839cf758891283859039dfd51d91928b02dbd8531",
+    "blockNumber": 129308135,
+    "confirmedAt": "2026-10-05T14:05:59.000Z",
+    "gasUsed": "2095200"
+  }
 }
