@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex,nofollow" />
+    <title>ARVYN Testnet Deployer</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <header class="brand">
+        <div class="mark" aria-hidden="true">A</div>
+        <div>
+          <strong>ARVYN</strong>
+          <span>Local testnet deployer</span>
+        </div>
+      </header>
+
+      <section class="hero">
+        <p class="eyebrow">ROBINHOOD CHAIN TESTNET</p>
+        <h1>Deploy the policy-limited prototype.</h1>
+        <p class="intro">
+          This local tool creates AgentRegistry, PolicyGuard and ArvynRouter in
+          one transaction. It never reads or stores a private key.
+        </p>
+      </section>
+
+      <section class="panel">
+        <div class="status-line">
+          <span id="statusDot" class="dot"></span>
+          <span id="statusText">Wallet not connected</span>
+        </div>
+
+        <dl class="details">
+          <div>
+            <dt>Network</dt>
+            <dd>Robinhood Chain Testnet · 46630</dd>
+          </div>
+          <div>
+            <dt>Admin and operator</dt>
+            <dd id="adminAddress"></dd>
+          </div>
+          <div>
+            <dt>Allowed receiver</dt>
+            <dd id="receiverAddress"></dd>
+          </div>
+          <div>
+            <dt>Transfer limit</dt>
+            <dd>0.001 testnet ETH</dd>
+          </div>
+          <div>
+            <dt>Daily limit</dt>
+            <dd>0.003 testnet ETH</dd>
+          </div>
+          <div>
+            <dt>Estimated deployment fee</dt>
+            <dd id="feeEstimate">Connect the wallet to estimate</dd>
+          </div>
+        </dl>
+
+        <div id="warning" class="warning" hidden></div>
+
+        <div class="actions">
+          <button id="connectButton" class="button primary">Connect MetaMask</button>
+          <button id="switchButton" class="button secondary" hidden>Switch network</button>
+          <button id="deployButton" class="button primary" disabled>
+            Request testnet deployment
+          </button>
+        </div>
+
+        <p class="fine-print">
+          The deployment button only opens a MetaMask request. Read the network
+          and fee in MetaMask, then confirm the transaction yourself. This is an
+          unaudited testnet prototype and must not be used with valuable assets.
+        </p>
+      </section>
+
+      <section id="result" class="panel result" hidden>
+        <p class="eyebrow">DEPLOYMENT CONFIRMED</p>
+        <h2>Testnet contracts are live.</h2>
+        <div id="contractList" class="contract-list"></div>
+        <a id="transactionLink" class="button secondary" target="_blank" rel="noopener noreferrer">
+          View transaction in explorer
+        </a>
+      </section>
+    </main>
+
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>

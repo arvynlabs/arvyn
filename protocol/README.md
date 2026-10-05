@@ -56,6 +56,21 @@ Not deployed. Deployment requires explicit wallet confirmations from the admin a
 The exact unsigned configuration is stored in
 `deployments/robinhood-testnet.plan.json`. Run `npm run network:check` to confirm
 the chain ID and inspect the public account balances without signing a
-transaction.
+transaction. After compiling, `npm run deployment:estimate` checks the complete
+constructor transaction against the public RPC and confirms that the deployer
+has enough testnet ETH.
+
+For a MetaMask deployment without exporting a private key, compile the
+contracts and start the local deployment page:
+
+```bash
+npm run compile
+npm run deploy:ui
+```
+
+Open `http://127.0.0.1:4173/deploy-ui/` in the browser where MetaMask is
+installed. The page validates the network and account and estimates gas before
+enabling the deployment request. The wallet owner must inspect and confirm the
+transaction personally.
 
 This prototype has not been independently audited. It must not be used with valuable assets or on mainnet.

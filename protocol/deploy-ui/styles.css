@@ -1,0 +1,265 @@
+:root {
+  color-scheme: dark;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #050505;
+  color: #f5f5f5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.022) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.022) 1px, transparent 1px),
+    radial-gradient(circle at 50% -20%, rgba(247, 85, 5, 0.14), transparent 42%),
+    #050505;
+  background-size: 40px 40px, 40px 40px, auto, auto;
+}
+
+.shell {
+  width: min(820px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 36px 0 64px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand strong,
+.brand span {
+  display: block;
+}
+
+.brand strong {
+  letter-spacing: 0.08em;
+}
+
+.brand span {
+  margin-top: 2px;
+  color: #808080;
+  font-size: 12px;
+}
+
+.mark {
+  display: grid;
+  width: 38px;
+  height: 38px;
+  place-items: center;
+  border: 1px solid rgba(247, 85, 5, 0.55);
+  border-radius: 50%;
+  color: #f75505;
+  font-weight: 900;
+}
+
+.hero {
+  padding: 88px 0 34px;
+}
+
+.eyebrow {
+  margin: 0 0 14px;
+  color: #f75505;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 12px;
+  letter-spacing: 0.16em;
+}
+
+h1,
+h2,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  max-width: 660px;
+  margin-bottom: 18px;
+  font-size: clamp(36px, 7vw, 64px);
+  line-height: 0.98;
+  letter-spacing: -0.045em;
+}
+
+h2 {
+  font-size: 28px;
+}
+
+.intro {
+  max-width: 640px;
+  color: #a3a3a3;
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+.panel {
+  border: 1px solid #252525;
+  border-radius: 18px;
+  background: rgba(10, 10, 10, 0.94);
+  box-shadow: 0 24px 90px rgba(0, 0, 0, 0.35);
+  padding: 24px;
+}
+
+.status-line {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #1f1f1f;
+  font-size: 14px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #5a5a5a;
+}
+
+.dot.ready {
+  background: #42d67b;
+  box-shadow: 0 0 16px rgba(66, 214, 123, 0.6);
+}
+
+.details {
+  margin: 8px 0 0;
+}
+
+.details div {
+  display: grid;
+  grid-template-columns: minmax(150px, 0.8fr) minmax(0, 1.4fr);
+  gap: 18px;
+  padding: 15px 0;
+  border-bottom: 1px solid #191919;
+}
+
+dt {
+  color: #777;
+  font-size: 13px;
+}
+
+dd {
+  margin: 0;
+  overflow-wrap: anywhere;
+  color: #e6e6e6;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 13px;
+  text-align: right;
+}
+
+.warning {
+  margin-top: 18px;
+  border: 1px solid rgba(247, 85, 5, 0.35);
+  border-radius: 12px;
+  background: rgba(247, 85, 5, 0.08);
+  color: #f1b28f;
+  padding: 13px 15px;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding-top: 22px;
+}
+
+.button {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  padding: 0 18px;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.button.primary {
+  background: #f75505;
+  color: #080808;
+}
+
+.button.secondary {
+  border-color: #303030;
+  background: #111;
+  color: #f5f5f5;
+}
+
+.button:disabled {
+  cursor: not-allowed;
+  opacity: 0.38;
+}
+
+.fine-print {
+  margin: 18px 0 0;
+  color: #6f6f6f;
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+.result {
+  margin-top: 18px;
+}
+
+.contract-list {
+  margin: 20px 0;
+}
+
+.contract-list div {
+  margin-bottom: 12px;
+}
+
+.contract-list span,
+.contract-list a {
+  display: block;
+}
+
+.contract-list span {
+  margin-bottom: 4px;
+  color: #777;
+  font-size: 12px;
+}
+
+.contract-list a {
+  color: #e8e8e8;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 12px;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 640px) {
+  .shell {
+    width: min(100% - 22px, 820px);
+    padding-top: 22px;
+  }
+
+  .hero {
+    padding-top: 64px;
+  }
+
+  .panel {
+    padding: 18px;
+  }
+
+  .details div {
+    display: block;
+  }
+
+  dd {
+    margin-top: 6px;
+    text-align: left;
+  }
+
+  .button {
+    width: 100%;
+  }
+}
