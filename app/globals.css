@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --arvyn-orange: #ff5a00;
+  --bg: #070707;
+  --panel: #111111;
+  --ink: #f5f5f5;
+  --muted: #8a8a8a;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: rgba(255, 90, 0, 0.35);
+  color: #fff;
+}
+
+/* thin scrollbars */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+::-webkit-scrollbar-thumb {
+  background: #262626;
+  border-radius: 8px;
+  border: 2px solid #0a0a0a;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3a3a3a;
+}
+
+@layer components {
+  .shell {
+    @apply mx-auto w-full max-w-[1200px] px-6 md:px-8;
+  }
+  .eyebrow {
+    @apply font-mono text-[11px] tracking-[0.22em] uppercase text-arvyn-muted;
+  }
+  .card {
+    @apply rounded-2xl border border-white/[0.08] bg-arvyn-panel/60;
+  }
+  .hairline {
+    @apply border-white/[0.08];
+  }
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg bg-arvyn-orange px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#ff6d1f] active:bg-[#e64f00];
+  }
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg border border-white/15 bg-white/[0.03] px-5 py-3 text-sm font-semibold text-white transition hover:border-white/30 hover:bg-white/[0.06];
+  }
+  .grid-bg {
+    background-image:
+      linear-gradient(to right, rgba(255,255,255,0.045) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255,255,255,0.045) 1px, transparent 1px);
+    background-size: 56px 56px;
+    mask-image: radial-gradient(ellipse 90% 70% at 50% 30%, black 40%, transparent 100%);
+  }
+  .code-block {
+    @apply rounded-xl border border-white/10 bg-black/60 font-mono text-[13px] leading-relaxed text-neutral-300;
+  }
+}
