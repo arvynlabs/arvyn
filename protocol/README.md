@@ -17,6 +17,10 @@ The first executable flow is deliberately narrow:
 
 No token contract, swap, bridge, production SDK or mainnet deployment is included.
 
+The separate `ArvynPublicSandbox` lets any testnet wallet record a no-value
+policy-approved action. It cannot receive or transfer ETH, has no owner, does
+not reference the transfer prototype, and applies a 60-second cooldown per wallet.
+
 ## Robinhood Chain Testnet
 
 | Field | Value |
@@ -67,6 +71,18 @@ operator nonce from `0` to `1`, and reduced the daily allowance from `0.003` to
 `0.0029 testnet ETH`.
 
 - [First execution transaction](https://explorer.testnet.chain.robinhood.com/tx/0xb0e1dbd8a46ff45cca86bba11f7ba9d19933685fa1eb7db197bac60a5a47afe2)
+
+## Public sandbox
+
+The isolated public sandbox was deployed on October 5, 2026.
+
+- Contract: [`0x92F35560aA52a4d668555264F84279d633a93596`](https://explorer.testnet.chain.robinhood.com/address/0x92F35560aA52a4d668555264F84279d633a93596)
+- [Deployment transaction](https://explorer.testnet.chain.robinhood.com/tx/0x9f04a2080199cba63f8b66473d4db61f2c16971818069a7fac3a48afcbbe2635)
+- Deployment record: `deployments/robinhood-testnet-sandbox.json`
+
+Run `npm run sandbox:verify` after compiling to compare the receipt, deployer,
+runtime bytecode, cooldown, contract balance and live execution count with the
+saved record.
 
 The exact unsigned configuration is stored in
 `deployments/robinhood-testnet.plan.json`. Run `npm run network:check` to confirm

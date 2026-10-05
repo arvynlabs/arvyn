@@ -100,7 +100,8 @@ export default function AppDashboard() {
         </div>
 
         <div className="mt-6 flex flex-wrap gap-3">
-          <Link href="/docs#sdk" className="btn-primary">View planned SDK →</Link>
+          <Link href="/testnet" className="btn-primary">Open live testnet →</Link>
+          <Link href="/docs#sdk" className="btn-secondary">View planned SDK</Link>
           <Link href="/protocol" className="btn-secondary">Protocol spec</Link>
         </div>
       </div>

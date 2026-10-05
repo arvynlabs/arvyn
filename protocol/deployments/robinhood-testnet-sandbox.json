@@ -1,0 +1,21 @@
+{
+  "network": {
+    "name": "Robinhood Chain Testnet",
+    "chainId": 46630,
+    "rpcUrl": "https://rpc.testnet.chain.robinhood.com",
+    "explorer": "https://explorer.testnet.chain.robinhood.com"
+  },
+  "deployer": "0xE901B4e664B863111351617579F7422d56aCa88c",
+  "contract": {
+    "name": "ArvynPublicSandbox",
+    "address": "0x92F35560aA52a4d668555264F84279d633a93596",
+    "cooldownSeconds": 60,
+    "acceptsValue": false
+  },
+  "deployment": {
+    "transactionHash": "0x9f04a2080199cba63f8b66473d4db61f2c16971818069a7fac3a48afcbbe2635",
+    "blockNumber": 129335387,
+    "date": "2026-10-05",
+    "status": "confirmed"
+  }
+}

@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex,nofollow" />
+    <title>ARVYN Public Sandbox Deployer</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="../deploy-ui/styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <header class="brand">
+        <div class="mark" aria-hidden="true">A</div>
+        <div>
+          <strong>ARVYN</strong>
+          <span>Public sandbox deployer</span>
+        </div>
+      </header>
+
+      <section class="hero">
+        <p class="eyebrow">ROBINHOOD CHAIN TESTNET</p>
+        <h1>Deploy the isolated public sandbox.</h1>
+        <p class="intro">
+          This local tool deploys one no-value demonstration contract. It cannot
+          transfer or hold ETH and it does not connect to the existing ARVYN contracts.
+        </p>
+      </section>
+
+      <section class="panel">
+        <div class="status-line">
+          <span id="statusDot" class="dot"></span>
+          <span id="statusText">Wallet not connected</span>
+        </div>
+
+        <dl class="details">
+          <div><dt>Network</dt><dd>Robinhood Chain Testnet · 46630</dd></div>
+          <div><dt>Expected deployer</dt><dd id="deployerAddress"></dd></div>
+          <div><dt>User value</dt><dd>0 ETH · gas only</dd></div>
+          <div><dt>Wallet cooldown</dt><dd>60 seconds</dd></div>
+          <div><dt>Existing contracts</dt><dd>not referenced</dd></div>
+          <div><dt>Estimated deployment fee</dt><dd id="feeEstimate">Connect the wallet to estimate</dd></div>
+        </dl>
+
+        <div id="warning" class="warning" hidden></div>
+
+        <div class="actions">
+          <button id="connectButton" class="button primary">Connect MetaMask</button>
+          <button id="switchButton" class="button secondary" hidden>Switch network</button>
+          <button id="deployButton" class="button primary" disabled>Request sandbox deployment</button>
+        </div>
+
+        <p class="fine-print">
+          MetaMask will show a contract deployment with no transfer value. Check the
+          Robinhood Chain Testnet network and the estimated fee before confirming.
+          This unaudited contract is for testnet demonstrations only.
+        </p>
+      </section>
+
+      <section id="result" class="panel result" hidden>
+        <p class="eyebrow">SANDBOX DEPLOYED</p>
+        <h2>The public test contract is live.</h2>
+        <div id="contractList" class="contract-list"></div>
+        <a id="transactionLink" class="button secondary" target="_blank" rel="noopener noreferrer">
+          View deployment in explorer
+        </a>
+      </section>
+    </main>
+
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>

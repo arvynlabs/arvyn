@@ -120,6 +120,16 @@ export default function DocsPage() {
               >
                 View first execution ↗
               </a>
+              <p className="mt-6 text-[15px] text-neutral-300">
+                A separate public sandbox records no-value test actions from any testnet wallet. It has no owner, cannot hold or transfer ETH, and does not reference the transfer prototype.
+              </p>
+              <Code>{`ArvynPublicSandbox  0x92F35560aA52a4d668555264F84279d633a93596\nValue transferred     0 ETH\nWallet cooldown       60 seconds`}</Code>
+              <a
+                href="/testnet"
+                className="mt-4 inline-flex text-sm font-semibold text-arvyn-orange transition hover:text-white"
+              >
+                Open public testnet sandbox →
+              </a>
             </section>
 
             <section id="examples" className="scroll-mt-28">

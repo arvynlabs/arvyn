@@ -6,7 +6,7 @@ ARVYN is an early-stage product concept for controlled AI-agent execution on Rob
 
 ## Current status
 
-This repository contains the public ARVYN website, an interactive product preview, and an unaudited smart-contract prototype deployed on Robinhood Chain Testnet. There is no published SDK, public API, mainnet protocol, or token contract.
+This repository contains the public ARVYN website, an interactive product preview, an unaudited smart-contract prototype, and an isolated public sandbox deployed on Robinhood Chain Testnet. There is no published SDK, public API, mainnet protocol, or token contract.
 
 The dashboard, transaction hashes, block numbers, process activity, and network metrics are generated in the browser for interface demonstration. They are not live blockchain telemetry.
 
@@ -17,6 +17,7 @@ The dashboard, transaction hashes, block numbers, process activity, and network 
 | Interactive dashboard demo | Production policy and routing contracts |
 | Testnet contract source and local tests | Audited mainnet deployment |
 | Verifiable testnet prototype and execution | Live protocol telemetry |
+| Public no-value testnet sandbox | Production agent execution |
 
 Examples in the documentation describe the intended developer experience. Package names, endpoints, and contract addresses shown there are illustrative and should not be used in production.
 
@@ -66,8 +67,9 @@ public/              brand assets
 protocol/            testnet contracts, tests, and deployment records
 ```
 
-The confirmed Robinhood Chain Testnet addresses and transaction are recorded in
-[`protocol/deployments/robinhood-testnet.plan.json`](protocol/deployments/robinhood-testnet.plan.json).
+The confirmed Robinhood Chain Testnet addresses and transactions are recorded in
+[`protocol/deployments/robinhood-testnet.plan.json`](protocol/deployments/robinhood-testnet.plan.json)
+and [`protocol/deployments/robinhood-testnet-sandbox.json`](protocol/deployments/robinhood-testnet-sandbox.json).
 
 ## License
 

@@ -12,6 +12,7 @@ export default defineConfig({
       input: {
         deploy: resolve(process.cwd(), "deploy-ui/index.html"),
         execute: resolve(process.cwd(), "execute-ui/index.html"),
+        sandboxDeploy: resolve(process.cwd(), "sandbox-deploy-ui/index.html"),
       },
     },
   },

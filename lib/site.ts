@@ -5,6 +5,7 @@ export const NAV_LINKS = [
   { label: "Docs", href: "/docs" },
   { label: "Token", href: "/token" },
   { label: "App", href: "/app" },
+  { label: "Testnet", href: "/testnet" },
 ];
 
 export const OFFICIAL_LINKS = {

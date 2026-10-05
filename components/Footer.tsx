@@ -18,6 +18,7 @@ const cols: { h: string; links: FooterLink[] }[] = [
       { label: "Token", href: "/token" },
       { label: "Ecosystem", href: "/ecosystem" },
       { label: "App", href: "/app" },
+      { label: "Public Testnet", href: "/testnet" },
     ],
   },
   {
