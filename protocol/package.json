@@ -1,0 +1,21 @@
+{
+  "name": "@arvyn/protocol",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "ARVYN testnet execution contracts and local verification tools.",
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "clean": "hardhat clean",
+    "network:check": "node scripts/check-network.js"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "5.6.1"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox-mocha-ethers": "4.0.0",
+    "ethers": "6.17.0",
+    "hardhat": "3.18.1"
+  }
+}

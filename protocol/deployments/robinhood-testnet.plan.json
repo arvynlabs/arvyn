@@ -1,0 +1,38 @@
+{
+  "status": "not_deployed",
+  "network": {
+    "name": "Robinhood Chain Testnet",
+    "chainId": 46630,
+    "currency": "ETH",
+    "rpc": "https://rpc.testnet.chain.robinhood.com",
+    "explorer": "https://explorer.testnet.chain.robinhood.com"
+  },
+  "accounts": {
+    "adminAndOperator": "0xE901B4e664B863111351617579F7422d56aCa88c",
+    "allowedReceiver": "0x0b93203D236B4Cf6905650F51a28be8845d5ec86"
+  },
+  "policy": {
+    "agentLabel": "ARVYN_TEST_AGENT_V1",
+    "agentId": "0x2a289d5a718a615fdfec59a4ce3387de18e13da9be12f64831f7e65698cc16b1",
+    "maxPerTransactionWei": "1000000000000000",
+    "maxPerTransactionEth": "0.001",
+    "dailyLimitWei": "3000000000000000",
+    "dailyLimitEth": "0.003"
+  },
+  "bootstrap": {
+    "contract": "ArvynTestnetBootstrap",
+    "constructorArguments": [
+      "0xE901B4e664B863111351617579F7422d56aCa88c",
+      "0x0b93203D236B4Cf6905650F51a28be8845d5ec86",
+      "1000000000000000",
+      "3000000000000000"
+    ]
+  },
+  "contracts": {
+    "bootstrap": null,
+    "agentRegistry": null,
+    "policyGuard": null,
+    "arvynRouter": null
+  },
+  "deploymentTransaction": null
+}

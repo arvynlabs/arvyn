@@ -60,7 +60,7 @@ export default function DocsPage() {
               Explore the planned developer interface for agents, chain data, policy checks, and transaction routing.
             </p>
             <div className="mt-6 rounded-xl border border-arvyn-orange/30 bg-arvyn-orange/[0.06] p-5 text-sm leading-relaxed text-neutral-300">
-              <strong className="text-white">Development status:</strong> The SDK, API, and smart contracts described below are planned and are not yet published or deployed. Code samples are illustrative only.
+              <strong className="text-white">Development status:</strong> The SDK and API described below are planned. A narrow contract prototype is available in the GitHub repository for local testing, but no ARVYN contracts are deployed. Code samples are illustrative only.
             </div>
           </Reveal>
 
@@ -71,7 +71,7 @@ export default function DocsPage() {
                 ARVYN provides a standard execution path for on-chain agents. Agents read blockchain
                 state, prepare actions, pass policy checks, and submit transactions through smart contracts.
               </p>
-              <Code>{`Status: interface preview\nSDK package: not published\nPublic API: not available\nContracts: not deployed`}</Code>
+              <Code>{`Status: interface and contract prototype\nSDK package: not published\nPublic API: not available\nContracts: source available, not deployed`}</Code>
             </section>
 
             <section id="architecture" className="scroll-mt-28">
@@ -102,8 +102,8 @@ export default function DocsPage() {
 
             <section id="contracts" className="scroll-mt-28">
               <h2 className="text-2xl font-bold">Contract Model</h2>
-              <p className="mt-3 text-[15px] text-neutral-300">The proposed policy routers mediate agent calls and limit each agent to a configured allowance and contract scope.</p>
-              <Code>{`Planned contracts. No addresses are deployed.\nArvynRouter    execution entrypoint\nPolicyGuard    allowances and limits\nAgentRegistry  identity and metadata`}</Code>
+              <p className="mt-3 text-[15px] text-neutral-300">The testnet prototype routes a native ETH transfer through an agent registry and fixed policy limits. It remains undeployed and unaudited.</p>
+              <Code>{`Prototype source is available. No addresses are deployed.\nArvynRouter    non-custodial execution entrypoint\nPolicyGuard    receiver and spend limits\nAgentRegistry  operator and active status`}</Code>
             </section>
 
             <section id="examples" className="scroll-mt-28">

@@ -2,3 +2,11 @@ node_modules
 .next
 .env
 *.tsbuildinfo
+
+# Smart-contract build output and local secrets
+protocol/artifacts
+protocol/cache
+protocol/typechain-types
+protocol/types
+protocol/coverage
+protocol/.env

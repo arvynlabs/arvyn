@@ -6,7 +6,7 @@ ARVYN is an early-stage product concept for controlled AI-agent execution on Rob
 
 ## Current status
 
-This repository contains the public ARVYN website and an interactive product preview. It does not yet contain a deployed protocol, published SDK, public API, smart contracts, or token contract.
+This repository contains the public ARVYN website, an interactive product preview, and an isolated smart-contract prototype for local and testnet validation. No ARVYN contracts are deployed yet. There is no published SDK, public API, live protocol, or token contract.
 
 The dashboard, transaction hashes, block numbers, process activity, and network metrics are generated in the browser for interface demonstration. They are not live blockchain telemetry.
 
@@ -15,7 +15,7 @@ The dashboard, transaction hashes, block numbers, process activity, and network 
 | Public website | TypeScript SDK |
 | Product and architecture preview | Public API and data streams |
 | Interactive dashboard demo | Deployed policy and routing contracts |
-| Open website source | Verifiable testnet integrations |
+| Testnet contract source and local tests | Verifiable testnet deployment |
 
 Examples in the documentation describe the intended developer experience. Package names, endpoints, and contract addresses shown there are illustrative and should not be used in production.
 
@@ -37,12 +37,22 @@ npm run build
 npm start
 ```
 
+Compile and test the isolated contract prototype with:
+
+```bash
+cd protocol
+npm install
+npm run compile
+npm test
+```
+
 ## Technology
 
 - Next.js 14 and React 18
 - TypeScript
 - Tailwind CSS
 - Framer Motion
+- Solidity, Hardhat, and OpenZeppelin Contracts for the testnet prototype
 
 ## Project structure
 
@@ -52,6 +62,7 @@ components/          shared interface components
 components/network/  dashboard preview components
 lib/                 navigation, content, and demo telemetry
 public/              brand assets
+protocol/            undeployed contracts, tests, and testnet notes
 ```
 
 ## License
