@@ -4,7 +4,7 @@ import SectionHeading from "@/components/SectionHeading";
 import { CTA } from "@/components/CTA";
 import { AGENT_TYPES } from "@/lib/site";
 
-export const metadata = { title: "Agents — ARVYN" };
+export const metadata = { title: "Agents | ARVYN" };
 
 export default function AgentsPage() {
   return (
@@ -18,8 +18,8 @@ export default function AgentsPage() {
               Verifiable processes, production-grade.
             </h1>
             <p className="mt-5 max-w-[560px] text-[16px] leading-relaxed text-arvyn-muted">
-              Four process classes cover the full settlement lifecycle: sense markets, research protocols,
-              route execution, and compose strategies — all coordinated through ARVYN.
+              Four process classes cover the settlement lifecycle: market monitoring, protocol research,
+              transaction execution, and strategy coordination through ARVYN.
             </p>
             <div className="mt-7 flex gap-3">
               <Link href="/docs#agents" className="btn-primary">Build an agent →</Link>

@@ -7,6 +7,11 @@ export const NAV_LINKS = [
   { label: "App", href: "/app" },
 ];
 
+export const OFFICIAL_LINKS = {
+  github: "https://github.com/arvynlabs/arvyn",
+  x: "https://x.com/arvynxyz",
+} as const;
+
 export const AGENT_TYPES = [
   {
     id: "market",
@@ -39,7 +44,7 @@ export const AGENT_TYPES = [
 ];
 
 export const TOKEN_USES = [
-  { title: "Agent access", text: "Stake or spend ARVN to provision agent compute and API throughput." },
+  { title: "Agent access", text: "Use ARVN to provision agent compute and API throughput." },
   { title: "Protocol services", text: "Pay for execution routing, data feeds, and analytics pipelines." },
   { title: "Ecosystem incentives", text: "Reward builders, operators, and data contributors securing the network." },
   { title: "Governance", text: "Vote on protocol upgrades, fee parameters, and agent standards." },

@@ -1,9 +1,9 @@
 import Link from "next/link";
 import Reveal from "@/components/Reveal";
 import { CTA } from "@/components/CTA";
-import { TOKEN_USES } from "@/lib/site";
+import { OFFICIAL_LINKS, TOKEN_USES } from "@/lib/site";
 
-export const metadata = { title: "Token — ARVYN" };
+export const metadata = { title: "Token | ARVYN" };
 
 export default function TokenPage() {
   return (
@@ -14,14 +14,21 @@ export default function TokenPage() {
           <Reveal>
             <p className="eyebrow"><span className="inline-block h-px w-6 bg-arvyn-orange" /> Token</p>
             <h1 className="mt-4 text-4xl font-bold tracking-tight md:text-6xl">
-              $ARVN powers the agent economy.
+              $ARVN coordinates network access.
             </h1>
             <p className="mt-5 max-w-[540px] text-[16px] leading-relaxed text-arvyn-muted">
-              The ARVN token powers the ARVYN ecosystem — access, services, incentives, and governance.
+              ARVN is planned as the utility token for agent access, protocol services, network incentives, and governance.
             </p>
-            <div className="mt-7 flex gap-3">
-              <span className="btn-primary cursor-default">Get $ARVN — Soon</span>
-              <Link href="/docs" className="btn-secondary">Token docs</Link>
+            <div className="mt-7 flex flex-wrap gap-3">
+              <a
+                href={OFFICIAL_LINKS.x}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-primary"
+              >
+                Follow token updates ↗
+              </a>
+              <Link href="/docs" className="btn-secondary">Read docs</Link>
             </div>
           </Reveal>
 
@@ -85,7 +92,7 @@ export default function TokenPage() {
         </div>
       </section>
 
-      <div className="pt-4"><CTA title="Get notified at TGE" text="Follow official channels. Token access will open through the ARVYN app first." /></div>
+      <div className="pt-4"><CTA title="Follow the $ARVN rollout" text="Check official channels for TGE and contract announcements. Token access will open through the ARVYN app first." /></div>
     </>
   );
 }

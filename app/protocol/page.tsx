@@ -3,7 +3,7 @@ import Reveal from "@/components/Reveal";
 import SectionHeading from "@/components/SectionHeading";
 import { CTA } from "@/components/CTA";
 
-export const metadata = { title: "Protocol — ARVYN" };
+export const metadata = { title: "Protocol | ARVYN" };
 
 const LAYERS = [
   {
@@ -38,11 +38,11 @@ export default function ProtocolPage() {
           <Reveal>
             <p className="eyebrow"><span className="inline-block h-px w-6 bg-arvyn-orange" /> Protocol</p>
             <h1 className="mt-4 max-w-[760px] text-4xl font-bold tracking-tight md:text-6xl">
-              The intelligence layer for on-chain execution.
+              A secure path from signal to settlement.
             </h1>
             <p className="mt-5 max-w-[580px] text-[16px] leading-relaxed text-arvyn-muted">
-              Three composable layers — runtime, execution, data — give machine processes everything
-              needed to go from signal to settlement.
+              Runtime, execution, and data services give agents the tools they need to move from
+              a validated signal to an on-chain receipt.
             </p>
           </Reveal>
         </div>

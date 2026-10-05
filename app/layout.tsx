@@ -8,14 +8,14 @@ const inter = Inter({ subsets: ["latin"], display: "swap", variable: "--font-int
 const mono = JetBrains_Mono({ subsets: ["latin"], display: "swap", variable: "--font-mono" });
 
 export const metadata: Metadata = {
-  title: "ARVYN — Agents. Intelligence. Execution.",
+  title: "ARVYN | Agents. Intelligence. Execution.",
   description:
-    "ARVYN is the AI execution layer for Robinhood Chain — infrastructure that turns machine intelligence into verifiable on-chain settlement.",
+    "ARVYN provides guarded execution infrastructure for AI agents on Robinhood Chain.",
   metadataBase: new URL("https://arvyn.xyz"),
   openGraph: {
-    title: "ARVYN — The AI execution layer for Robinhood Chain",
+    title: "ARVYN | Execution infrastructure for Robinhood Chain",
     description:
-      "Execution infrastructure for verifiable machine processes: sense chain state, plan strategies, and settle through smart contracts.",
+      "Read chain state, apply policy, simulate transactions, and settle through smart contracts.",
     type: "website",
   },
 };

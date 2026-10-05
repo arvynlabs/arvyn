@@ -18,12 +18,12 @@ export type ActivityItem = {
 const BASE_ACTIVITY: ActivityItem[] = [
   { id: "a1", process: "market-02", kind: "market", action: "liquidity scan USDC/ETH → signal 0.91", status: "settled", latency: "410ms", hash: "0x7a…f3", age: "12s" },
   { id: "a2", process: "research-07", kind: "research", action: "protocol risk score 0.12 · vault audit", status: "settled", latency: "1.2s", hash: "0x3d…9c", age: "38s" },
-  { id: "a3", process: "strategy-04", kind: "strategy", action: "plan 3 steps · policy OK · rebalance", status: "active", latency: "—", hash: "0x91…44", age: "now" },
+  { id: "a3", process: "strategy-04", kind: "strategy", action: "plan 3 steps · policy OK · rebalance", status: "active", latency: "n/a", hash: "0x91…44", age: "now" },
   { id: "a4", process: "execution-11", kind: "execution", action: "simulate swap → sign → route", status: "simulating", latency: "280ms", hash: "0xb2…71", age: "now" },
   { id: "a5", process: "market-05", kind: "market", action: "spread alert 0.84 · cross-market state", status: "settled", latency: "390ms", hash: "0x55…e0", age: "1m" },
-  { id: "a6", process: "execution-03", kind: "execution", action: "settle rebalance(pool) · 2/3 steps", status: "queued", latency: "—", hash: "0xc8…2b", age: "1m" },
+  { id: "a6", process: "execution-03", kind: "execution", action: "settle rebalance(pool) · 2/3 steps", status: "queued", latency: "n/a", hash: "0xc8…2b", age: "1m" },
   { id: "a7", process: "research-02", kind: "research", action: "activity cluster · 1,284 events indexed", status: "settled", latency: "900ms", hash: "0x19…ad", age: "2m" },
-  { id: "a8", process: "strategy-01", kind: "strategy", action: "scheduled run · DCA vault · guard OK", status: "active", latency: "—", hash: "0x77…6f", age: "2m" },
+  { id: "a8", process: "strategy-01", kind: "strategy", action: "scheduled run · DCA vault · guard OK", status: "active", latency: "n/a", hash: "0x77…6f", age: "2m" },
 ];
 
 export type NetworkSnapshot = {
@@ -36,9 +36,10 @@ export type NetworkSnapshot = {
   throughput: number[];
 };
 
-export function useLiveNetwork() {
+export function useLiveNetwork(externallyPaused = false) {
   const [tick, setTick] = useState(0);
-  const [paused, setPaused] = useState(false);
+  const [locallyPaused, setPaused] = useState(false);
+  const paused = locallyPaused || externallyPaused;
 
   useEffect(() => {
     if (paused) return;

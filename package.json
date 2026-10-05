@@ -2,7 +2,7 @@
   "name": "arvyn",
   "version": "1.0.0",
   "private": true,
-  "description": "ARVYN — Agents. Intelligence. Execution. AI agent infrastructure on Robinhood Chain.",
+  "description": "ARVYN | Agents. Intelligence. Execution. AI agent infrastructure on Robinhood Chain.",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "framer-motion": "^11.0.0",
-    "next": "14.2.5",
+    "next": "^14.2.35",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },

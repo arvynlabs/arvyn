@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import { NAV_LINKS } from "@/lib/site";
+import { NAV_LINKS, OFFICIAL_LINKS } from "@/lib/site";
 import Logo from "./Logo";
 
 export default function Navbar() {
@@ -49,7 +49,15 @@ export default function Navbar() {
 
         <div className="hidden items-center gap-3 lg:flex">
           <a
-            href="https://x.com/arvynxyz"
+            href={OFFICIAL_LINKS.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[13.5px] text-neutral-400 transition hover:text-white"
+          >
+            GitHub
+          </a>
+          <a
+            href={OFFICIAL_LINKS.x}
             target="_blank"
             rel="noopener noreferrer"
             className="text-[13.5px] text-neutral-400 transition hover:text-white"
@@ -65,6 +73,8 @@ export default function Navbar() {
           onClick={() => setOpen(!open)}
           className="flex h-10 w-10 items-center justify-center rounded-lg border border-white/10 lg:hidden"
           aria-label="Toggle menu"
+          aria-expanded={open}
+          aria-controls="mobile-navigation"
         >
           <div className="space-y-1.5">
             <div className={`h-px w-5 bg-white transition ${open ? "translate-y-[7px] rotate-45" : ""}`} />
@@ -75,7 +85,7 @@ export default function Navbar() {
       </div>
 
       {open && (
-        <div className="border-t border-white/[0.08] bg-[#070707]/95 backdrop-blur-xl lg:hidden">
+        <div id="mobile-navigation" className="border-t border-white/[0.08] bg-[#070707]/95 backdrop-blur-xl lg:hidden">
           <div className="shell flex flex-col gap-1 py-4">
             {[{ label: "Home", href: "/" }, ...NAV_LINKS].map((l) => (
               <Link
@@ -89,6 +99,25 @@ export default function Navbar() {
                 {l.label}
               </Link>
             ))}
+            <div className="my-2 h-px bg-white/[0.08]" />
+            <div className="flex gap-2">
+              <a
+                href={OFFICIAL_LINKS.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-secondary flex-1 !py-2.5"
+              >
+                GitHub ↗
+              </a>
+              <a
+                href={OFFICIAL_LINKS.x}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-secondary flex-1 !py-2.5"
+              >
+                X ↗
+              </a>
+            </div>
             <Link href="/app" onClick={() => setOpen(false)} className="btn-primary mt-2">
               Launch App
             </Link>

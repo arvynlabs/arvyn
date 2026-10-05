@@ -2,14 +2,14 @@ import Reveal from "@/components/Reveal";
 import SectionHeading from "@/components/SectionHeading";
 import { CTA } from "@/components/CTA";
 
-export const metadata = { title: "Ecosystem — ARVYN" };
+export const metadata = { title: "Ecosystem | ARVYN" };
 
 const FLOW = [
   { t: "Users", d: "Set goals, constraints and budgets. Stay in control.", tag: "CONTROL" },
   { t: "AI Agents", d: "Market, research, execution and strategy agents do the work.", tag: "INTELLIGENCE" },
   { t: "ARVYN Protocol", d: "Runtime, execution routing and real-time data.", tag: "COORDINATION" },
   { t: "Robinhood Chain", d: "Fast, accessible settlement layer.", tag: "SETTLEMENT" },
-  { t: "On-chain Applications", d: "DEXs, lending, vaults — any composable action.", tag: "DESTINATION" },
+  { t: "On-chain Applications", d: "DEXs, lending markets, vaults, and other composable actions.", tag: "DESTINATION" },
 ];
 
 export default function EcosystemPage() {
@@ -57,7 +57,7 @@ export default function EcosystemPage() {
         <div className="shell">
           <SectionHeading eyebrow="Participants" title="Built for three sides of the market." />
           <div className="mt-8 grid gap-4 md:grid-cols-3">
-            {[["Builders", "Ship agent-powered apps with the SDK and open action registry."], ["Operators", "Run agent infrastructure and earn ARVN for reliable execution."], ["Applications", "Expose actions to the agent network and tap autonomous flow."]].map(([t, d], i) => (
+            {[["Builders", "Ship agent-enabled apps with the SDK and open action registry."], ["Operators", "Run agent infrastructure and earn ARVN for reliable execution."], ["Applications", "Expose actions to the agent network and receive routed activity."]].map(([t, d], i) => (
               <Reveal key={t} delay={i * 0.06}>
                 <div className="card h-full p-7"><p className="text-lg font-bold">{t}</p><p className="mt-2 text-sm leading-relaxed text-arvyn-muted">{d}</p></div>
               </Reveal>
@@ -66,7 +66,7 @@ export default function EcosystemPage() {
         </div>
       </section>
 
-      <div className="pt-16"><CTA title="Plug into the ecosystem" text="Expose an action, run an operator node, or launch an agent-powered app." /></div>
+      <div className="pt-16"><CTA title="Plug into the ecosystem" text="Expose an action, run an operator node, or launch an app that uses ARVYN agents." /></div>
     </>
   );
 }

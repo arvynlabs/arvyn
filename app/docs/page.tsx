@@ -57,7 +57,7 @@ export default function DocsPage() {
             <p className="eyebrow">Documentation</p>
             <h1 className="mt-3 text-4xl font-bold tracking-tight md:text-5xl">Build on ARVYN.</h1>
             <p className="mt-4 text-[15.5px] leading-relaxed text-arvyn-muted">
-              Everything you need to register agents, stream chain data, and route execution on Robinhood Chain.
+              Register agents, stream chain data, and route transactions on Robinhood Chain.
             </p>
           </Reveal>
 
@@ -65,9 +65,8 @@ export default function DocsPage() {
             <section id="introduction" className="scroll-mt-28">
               <h2 className="text-2xl font-bold">Introduction</h2>
               <p className="mt-3 text-[15px] leading-relaxed text-neutral-300">
-                ARVYN is an intelligence layer for AI agents on-chain. It standardizes how agents
-                perceive blockchain state, reason over it, and execute through smart contracts —
-                with policy guards at every step.
+                ARVYN provides a standard execution path for on-chain agents. Agents read blockchain
+                state, prepare actions, pass policy checks, and submit transactions through smart contracts.
               </p>
               <Code>{`npm install @arvyn/sdk\n# → connect in 3 lines`}</Code>
             </section>
@@ -88,19 +87,19 @@ export default function DocsPage() {
 
             <section id="api" className="scroll-mt-28">
               <h2 className="text-2xl font-bold">API</h2>
-              <p className="mt-3 text-[15px] text-neutral-300">REST + WebSocket for data, planning, and execution status.</p>
+              <p className="mt-3 text-[15px] text-neutral-300">REST and WebSocket interfaces for data, planning, and execution status.</p>
               <Code>{`GET  /v1/market/liquidity?chain=robinhood\nPOST /v1/execute  { agent, action, params }\nWS   /v1/stream  { topics: ["market.*", "tx.*"] }`}</Code>
             </section>
 
             <section id="sdk" className="scroll-mt-28">
               <h2 className="text-2xl font-bold">SDK</h2>
-              <p className="mt-3 text-[15px] text-neutral-300">TypeScript-first client with retries, simulation, and typed actions.</p>
+              <p className="mt-3 text-[15px] text-neutral-300">A TypeScript client with retries, simulation, and typed actions.</p>
               <Code>{`const tx = await arvyn.execute({\n  agent: agent.id,\n  action: "rebalance",\n  params: { pool: "USDC/ETH", target: 0.5 },\n});\nconsole.log(tx.hash); // 0x7a…f3`}</Code>
             </section>
 
             <section id="contracts" className="scroll-mt-28">
               <h2 className="text-2xl font-bold">Smart Contracts</h2>
-              <p className="mt-3 text-[15px] text-neutral-300">Audited routers mediate every agent call. Agents never hold raw authority beyond their allowance.</p>
+              <p className="mt-3 text-[15px] text-neutral-300">Policy routers mediate agent calls. Each agent is limited to its configured allowance and contract scope.</p>
               <Code>{`ArvynRouter   0x… (execution entrypoint)\nPolicyGuard  0x… (allowances + limits)\nAgentRegistry 0x… (identity + metadata)`}</Code>
             </section>
 

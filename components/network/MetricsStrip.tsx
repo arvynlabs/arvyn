@@ -5,8 +5,8 @@ import { useLiveNetwork } from "@/lib/network";
 export default function MetricsStrip() {
   const { snapshot } = useLiveNetwork();
   const items = [
-    [`${snapshot.activeProcesses.toLocaleString()}`, "active processes"],
-    [snapshot.executions24h.toLocaleString(), "executions / 24h"],
+    [`${snapshot.activeProcesses.toLocaleString("en-US")}`, "active processes"],
+    [snapshot.executions24h.toLocaleString("en-US"), "executions / 24h"],
     [`${snapshot.successRate.toFixed(2)}%`, "settle success"],
     [`${(snapshot.avgSettleMs / 1000).toFixed(2)}s`, "median settle"],
   ];

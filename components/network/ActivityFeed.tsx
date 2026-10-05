@@ -2,8 +2,8 @@
 
 import { STATUS_STYLE, useLiveNetwork } from "@/lib/network";
 
-export default function ActivityFeed({ compact = false }: { compact?: boolean }) {
-  const { activity, snapshot } = useLiveNetwork();
+export default function ActivityFeed({ compact = false, paused = false }: { compact?: boolean; paused?: boolean }) {
+  const { activity, snapshot } = useLiveNetwork(paused);
   const rows = compact ? activity.slice(0, 5) : activity;
   return (
     <div className="overflow-hidden rounded-2xl border border-white/10 bg-black/50">
@@ -16,7 +16,7 @@ export default function ActivityFeed({ compact = false }: { compact?: boolean })
             <span className="absolute h-full w-full animate-ping rounded-full bg-emerald-400 opacity-60" />
             <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
           </span>
-          LIVE · block {snapshot.blockHeight.toLocaleString()}
+          TESTNET LIVE · block {snapshot.blockHeight.toLocaleString("en-US")}
         </span>
       </div>
       {rows.map((a, i) => (

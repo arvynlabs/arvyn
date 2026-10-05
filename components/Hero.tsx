@@ -15,12 +15,12 @@ export default function Hero() {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.55 }}
-            className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-3.5 py-1.5 font-mono text-[11.5px] text-neutral-300"
+            className="inline-flex max-w-full flex-wrap items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-3.5 py-1.5 font-mono text-[11.5px] text-neutral-300"
           >
             <span className="h-1.5 w-1.5 rounded-full bg-arvyn-orange" />
-            The AI execution layer for Robinhood Chain
-            <span className="text-neutral-600">·</span>
-            <span className="text-neutral-400">Programmatic Execution Infrastructure</span>
+            AI execution infrastructure for Robinhood Chain
+            <span className="hidden text-neutral-600 sm:inline">·</span>
+            <span className="hidden text-neutral-400 sm:inline">Testnet</span>
           </motion.div>
 
           <motion.h1
@@ -40,8 +40,8 @@ export default function Hero() {
             transition={{ duration: 0.65, delay: 0.16 }}
             className="mt-6 max-w-[520px] text-[16.5px] leading-relaxed text-arvyn-muted"
           >
-            ARVYN is the execution infrastructure that turns machine intelligence into
-            verifiable on-chain settlement — built for coordinated processes, not chatbots.
+            ARVYN gives AI agents a controlled path from blockchain data to verifiable
+            on-chain settlement on Robinhood Chain.
           </motion.p>
 
           <motion.div

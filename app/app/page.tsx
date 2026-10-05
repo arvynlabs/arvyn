@@ -21,8 +21,8 @@ export default function AppDashboard() {
     .join(" ");
 
   const cards = [
-    ["Active processes", snapshot.activeProcesses.toLocaleString(), "+2.1% / 1h"],
-    ["Executions · 24h", snapshot.executions24h.toLocaleString(), "+318 since open"],
+    ["Active processes", snapshot.activeProcesses.toLocaleString("en-US"), "+2.1% / 1h"],
+    ["Executions · 24h", snapshot.executions24h.toLocaleString("en-US"), "+318 since open"],
     ["Settle success", `${snapshot.successRate.toFixed(2)}%`, "rolling 24h"],
     ["Median settle", `${(snapshot.avgSettleMs / 1000).toFixed(2)}s`, "simulate → settle"],
   ];
@@ -37,7 +37,7 @@ export default function AppDashboard() {
           </div>
           <div className="ml-auto flex items-center gap-3">
             <span className="flex items-center gap-1.5 rounded-full border border-emerald-500/30 px-3 py-1.5 font-mono text-[11.5px] text-emerald-400">
-              <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" /> {snapshot.status} · #{snapshot.blockHeight.toLocaleString()}
+              <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" /> {snapshot.status} · #{snapshot.blockHeight.toLocaleString("en-US")}
             </span>
             <button onClick={() => setPaused(!paused)} className="btn-secondary !px-4 !py-2 text-[12.5px]">
               {paused ? "Resume live" : "Pause live"}
@@ -93,7 +93,7 @@ export default function AppDashboard() {
         </div>
 
         <div className="mt-4">
-          <ActivityFeed />
+          <ActivityFeed paused={paused} />
         </div>
 
         <div className="mt-6 flex flex-wrap gap-3">

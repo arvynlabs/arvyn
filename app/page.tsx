@@ -12,20 +12,20 @@ const STEPS = [
   {
     n: "01",
     name: "PERCEPTION",
-    text: "Processes collect and resolve on-chain data.",
-    detail: "Mempool, state, liquidity and event streams normalized into a single agent-readable context.",
+    text: "Agents collect and normalize on-chain data.",
+    detail: "Mempool, state, liquidity, and event streams become a consistent context for each run.",
   },
   {
     n: "02",
     name: "INTELLIGENCE",
-    text: "Models analyze information and create strategies.",
-    detail: "Scoring, forecasting and policy checks turn raw data into executable plans.",
+    text: "Models evaluate the data and prepare a plan.",
+    detail: "Scoring, forecasting, and policy checks turn a signal into an executable sequence.",
   },
   {
     n: "03",
     name: "EXECUTION",
-    text: "Processes perform actions through smart contracts.",
-    detail: "Guarded routers submit, simulate and settle transactions with full audit trails.",
+    text: "Guarded routers submit transactions to smart contracts.",
+    detail: "Each transaction is simulated, signed within policy, settled, and recorded with a receipt.",
   },
 ];
 
@@ -39,14 +39,14 @@ export default function Home() {
         <div className="shell grid gap-12 lg:grid-cols-[0.9fr_1.1fr]">
           <SectionHeading
             eyebrow="What is ARVYN"
-            title="Execution infrastructure for machine processes."
-            text="ARVYN provides the infrastructure for verifiable execution processes to read blockchain state, reason over it, and settle actions on-chain."
+            title="Execution infrastructure for on-chain agents."
+            text="ARVYN connects blockchain data, agent policies, and transaction routing in one verifiable workflow."
           />
           <div>
             <Reveal>
               <p className="rounded-xl border border-white/10 bg-black/40 p-5 font-mono text-[13.5px] leading-relaxed text-neutral-300">
-                ARVYN is not a chatbot. It is deterministic infrastructure that converts
-                machine intelligence into policy-guarded blockchain settlement.
+                ARVYN gives agents a controlled path from blockchain data to signed transactions.
+                Policies, simulations, and receipts stay visible at every step.
               </p>
             </Reveal>
             <div className="mt-4 grid gap-3 sm:grid-cols-2">
@@ -107,7 +107,7 @@ export default function Home() {
             <SectionHeading
               eyebrow="Agent Network"
               title="Four specialized process classes."
-              text="Each class is a narrow, auditable execution process — composed into strategies, never a black box."
+              text="Each class handles a defined part of the execution flow and can be audited on its own."
             />
             <Reveal>
               <Link href="/agents" className="btn-secondary !py-2.5 text-[13px]">View all agents →</Link>
@@ -137,7 +137,7 @@ export default function Home() {
             <SectionHeading
               eyebrow="Execution layer"
               title="Built on Robinhood Chain."
-              text="ARVYN uses Robinhood Chain as the execution layer for fast, accessible and scalable AI-powered financial applications."
+              text="ARVYN settles agent transactions on Robinhood Chain, giving financial applications fast execution and a clear on-chain record."
             />
             <div className="mt-8 space-y-3">
               {[
@@ -173,7 +173,7 @@ export default function Home() {
           <SectionHeading
             eyebrow="Ecosystem"
             title="From operator intent to on-chain settlement."
-            text="Every run follows the same verifiable path — intent, machine processes, protocol routing, settlement."
+            text="Every run follows a clear path from operator intent through policy checks, routing, and settlement."
           />
           <Reveal className="mt-12">
             <EcosystemVisual />
@@ -192,9 +192,9 @@ export default function Home() {
         <div className="shell">
           <div className="flex flex-wrap items-end justify-between gap-6">
             <SectionHeading
-              eyebrow="Network status · live"
-              title="The network, right now."
-              text="Process statuses, execution traces and settlement activity — as the dashboard sees it."
+              eyebrow="Testnet activity"
+              title="Current network activity."
+              text="Review process status, execution traces, and recent testnet settlements."
             />
             <Reveal>
               <Link href="/app" className="btn-primary !py-2.5 text-[13px]">Open dashboard →</Link>

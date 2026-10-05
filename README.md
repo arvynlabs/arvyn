@@ -1,4 +1,4 @@
-# ARVYN — Agents. Intelligence. Execution.
+# ARVYN | Agents. Intelligence. Execution.
 
 AI agent infrastructure on Robinhood Chain. Next.js 14 + TypeScript + Tailwind + Framer Motion.
 
