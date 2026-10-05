@@ -18,9 +18,9 @@ export default function EcosystemVisual() {
   return (
     <div className="card overflow-hidden p-6 md:p-10">
       <div className="flex items-center justify-between">
-        <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-neutral-400">Ecosystem flow · live topology</p>
+        <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-neutral-400">Ecosystem flow · planned topology</p>
         <span className="flex items-center gap-1.5 font-mono text-[11px] text-emerald-400">
-          <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" /> 5/5 connected
+          <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" /> 5 planned stages
         </span>
       </div>
 
@@ -66,9 +66,9 @@ export default function EcosystemVisual() {
       </div>
 
       <div className="mt-8 grid gap-3 border-t border-white/[0.07] pt-6 font-mono text-[11.5px] text-neutral-500 sm:grid-cols-3">
-        <span>◷ median route <strong className="text-white">0.84s</strong></span>
-        <span>✓ settlement <strong className="text-emerald-400">99.2%</strong></span>
-        <span>⏺ processes <strong className="text-white">1,284 online</strong></span>
+        <span>◷ sample route <strong className="text-white">0.84s</strong></span>
+        <span>✓ sample success <strong className="text-emerald-400">99.2%</strong></span>
+        <span>⏺ demo processes <strong className="text-white">1,284</strong></span>
       </div>
     </div>
   );

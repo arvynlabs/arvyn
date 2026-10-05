@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { STATUS_STYLE, useLiveNetwork } from "@/lib/network";
+import { STATUS_STYLE, useDemoNetwork } from "@/lib/network";
 import ExecutionTrace from "@/components/network/ExecutionTrace";
 import ActivityFeed from "@/components/network/ActivityFeed";
 
@@ -14,17 +14,17 @@ const FLEET = [
 ] as const;
 
 export default function AppDashboard() {
-  const { snapshot, paused, setPaused } = useLiveNetwork();
+  const { snapshot, paused, setPaused } = useDemoNetwork();
   const max = Math.max(...snapshot.throughput);
   const points = snapshot.throughput
     .map((v, i) => `${(i / (snapshot.throughput.length - 1)) * 100},${34 - (v / max) * 30}`)
     .join(" ");
 
   const cards = [
-    ["Active processes", snapshot.activeProcesses.toLocaleString("en-US"), "+2.1% / 1h"],
-    ["Executions · 24h", snapshot.executions24h.toLocaleString("en-US"), "+318 since open"],
-    ["Settle success", `${snapshot.successRate.toFixed(2)}%`, "rolling 24h"],
-    ["Median settle", `${(snapshot.avgSettleMs / 1000).toFixed(2)}s`, "simulate → settle"],
+    ["Demo processes", snapshot.activeProcesses.toLocaleString("en-US"), "generated locally"],
+    ["Sample executions", snapshot.executions24h.toLocaleString("en-US"), "interface preview"],
+    ["Sample success", `${snapshot.successRate.toFixed(2)}%`, "illustrative metric"],
+    ["Sample settle", `${(snapshot.avgSettleMs / 1000).toFixed(2)}s`, "illustrative metric"],
   ];
 
   return (
@@ -32,15 +32,18 @@ export default function AppDashboard() {
       <div className="shell">
         <div className="flex flex-wrap items-center gap-4">
           <div>
-            <p className="eyebrow">ARVYN App · testnet</p>
-            <h1 className="mt-2 text-3xl font-bold tracking-tight md:text-4xl">Network dashboard.</h1>
+            <p className="eyebrow">ARVYN App · interface preview</p>
+            <h1 className="mt-2 text-3xl font-bold tracking-tight md:text-4xl">Execution dashboard demo.</h1>
+            <p className="mt-3 max-w-[620px] text-sm leading-relaxed text-arvyn-muted">
+              This page uses generated sample data to demonstrate the planned ARVYN interface. It is not live network telemetry.
+            </p>
           </div>
           <div className="ml-auto flex items-center gap-3">
             <span className="flex items-center gap-1.5 rounded-full border border-emerald-500/30 px-3 py-1.5 font-mono text-[11.5px] text-emerald-400">
-              <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" /> {snapshot.status} · #{snapshot.blockHeight.toLocaleString("en-US")}
+              <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" /> demo telemetry · #{snapshot.blockHeight.toLocaleString("en-US")}
             </span>
             <button onClick={() => setPaused(!paused)} className="btn-secondary !px-4 !py-2 text-[12.5px]">
-              {paused ? "Resume live" : "Pause live"}
+              {paused ? "Resume demo" : "Pause demo"}
             </button>
           </div>
         </div>
@@ -58,7 +61,7 @@ export default function AppDashboard() {
         <div className="mt-4 grid gap-4 lg:grid-cols-[1fr_380px]">
           <div className="card p-6">
             <div className="flex items-center justify-between">
-              <p className="font-mono text-[11px] uppercase tracking-[0.14em] text-neutral-500">Execution throughput · live</p>
+              <p className="font-mono text-[11px] uppercase tracking-[0.14em] text-neutral-500">Execution throughput · simulated</p>
               <p className="font-mono text-[11px] text-neutral-600">tx / min</p>
             </div>
             <svg viewBox="0 0 100 36" className="mt-4 h-[140px] w-full" preserveAspectRatio="none" aria-hidden>
@@ -97,7 +100,7 @@ export default function AppDashboard() {
         </div>
 
         <div className="mt-6 flex flex-wrap gap-3">
-          <Link href="/docs#sdk" className="btn-primary">Register a process →</Link>
+          <Link href="/docs#sdk" className="btn-primary">View planned SDK →</Link>
           <Link href="/protocol" className="btn-secondary">Protocol spec</Link>
         </div>
       </div>

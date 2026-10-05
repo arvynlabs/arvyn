@@ -11,11 +11,11 @@ export const metadata: Metadata = {
   title: "ARVYN | Agents. Intelligence. Execution.",
   description:
     "ARVYN provides guarded execution infrastructure for AI agents on Robinhood Chain.",
-  metadataBase: new URL("https://arvyn.xyz"),
+  metadataBase: new URL("https://www.arvynagents.xyz"),
   openGraph: {
     title: "ARVYN | Execution infrastructure for Robinhood Chain",
     description:
-      "Read chain state, apply policy, simulate transactions, and settle through smart contracts.",
+      "Explore a planned workflow for reading chain state, applying policy, simulating transactions, and settling through smart contracts.",
     type: "website",
   },
 };

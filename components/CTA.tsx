@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export function CTA({ title = "Start building with ARVYN", text = "Connect the SDK, register an agent, and route a guarded transaction on Robinhood Chain." }) {
+export function CTA({ title = "Explore the ARVYN model", text = "Review the planned execution flow, policy controls, and developer interface." }) {
   return (
     <section className="shell pb-24">
       <div className="relative overflow-hidden rounded-2xl border border-white/[0.08] bg-arvyn-panel px-8 py-14 text-center md:py-16">
@@ -10,7 +10,7 @@ export function CTA({ title = "Start building with ARVYN", text = "Connect the S
           <h2 className="mx-auto mt-4 max-w-[560px] text-3xl font-bold tracking-tight md:text-4xl">{title}</h2>
           <p className="mx-auto mt-3 max-w-[480px] text-[15px] text-arvyn-muted">{text}</p>
           <div className="mt-7 flex flex-wrap justify-center gap-3">
-            <Link href="/app" className="btn-primary">Launch App →</Link>
+            <Link href="/app" className="btn-primary">Open Demo →</Link>
             <Link href="/docs" className="btn-secondary">Read Docs</Link>
           </div>
         </div>

@@ -1,14 +1,14 @@
 "use client";
 
-import { useLiveNetwork } from "@/lib/network";
+import { useDemoNetwork } from "@/lib/network";
 
 export default function MetricsStrip() {
-  const { snapshot } = useLiveNetwork();
+  const { snapshot } = useDemoNetwork();
   const items = [
-    [`${snapshot.activeProcesses.toLocaleString("en-US")}`, "active processes"],
-    [snapshot.executions24h.toLocaleString("en-US"), "executions / 24h"],
-    [`${snapshot.successRate.toFixed(2)}%`, "settle success"],
-    [`${(snapshot.avgSettleMs / 1000).toFixed(2)}s`, "median settle"],
+    [`${snapshot.activeProcesses.toLocaleString("en-US")}`, "demo processes"],
+    [snapshot.executions24h.toLocaleString("en-US"), "sample executions"],
+    [`${snapshot.successRate.toFixed(2)}%`, "sample success"],
+    [`${(snapshot.avgSettleMs / 1000).toFixed(2)}s`, "sample settle"],
   ];
   return (
     <div className="mt-10 grid grid-cols-2 overflow-hidden rounded-xl border border-white/[0.08] bg-black/40 font-mono backdrop-blur md:grid-cols-4">

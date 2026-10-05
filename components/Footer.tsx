@@ -24,9 +24,9 @@ const cols: { h: string; links: FooterLink[] }[] = [
     h: "Developers",
     links: [
       { label: "Documentation", href: "/docs" },
-      { label: "API Reference", href: "/docs#api" },
-      { label: "SDK", href: "/docs#sdk" },
-      { label: "Smart Contracts", href: "/docs#contracts" },
+      { label: "API Concept", href: "/docs#api" },
+      { label: "SDK Preview", href: "/docs#sdk" },
+      { label: "Contract Model", href: "/docs#contracts" },
     ],
   },
   {
@@ -49,10 +49,10 @@ export default function Footer() {
             <span className="text-[15px] font-bold tracking-[0.08em]">ARVYN</span>
           </div>
           <p className="mt-4 text-[15px] font-medium text-white">Agents. Intelligence. Execution.</p>
-          <p className="mt-2 text-sm text-arvyn-muted">Built on Robinhood Chain.</p>
+          <p className="mt-2 text-sm text-arvyn-muted">Designed for Robinhood Chain.</p>
           <div className="mt-6 inline-flex items-center gap-2 rounded-full border border-white/10 px-3 py-1.5 font-mono text-[11px] text-neutral-400">
             <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
-            Testnet systems operational
+            Product preview · demo telemetry
           </div>
         </div>
         <div className="grid grid-cols-2 gap-8 sm:grid-cols-3">
@@ -85,7 +85,7 @@ export default function Footer() {
       </div>
       <div className="border-t border-white/[0.06]">
         <div className="shell flex flex-col gap-2 py-6 text-[12.5px] text-neutral-500 sm:flex-row sm:items-center sm:justify-between">
-          <span>© 2026 ARVYN Labs. All rights reserved.</span>
+          <span>© 2026 ARVYN Labs. Source code licensed under MIT.</span>
           <span className="font-mono">Robinhood Chain · $ARVN · Execution Layer</span>
         </div>
       </div>

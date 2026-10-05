@@ -36,7 +36,7 @@ export type NetworkSnapshot = {
   throughput: number[];
 };
 
-export function useLiveNetwork(externallyPaused = false) {
+export function useDemoNetwork(externallyPaused = false) {
   const [tick, setTick] = useState(0);
   const [locallyPaused, setPaused] = useState(false);
   const paused = locallyPaused || externallyPaused;
@@ -62,7 +62,7 @@ export function useLiveNetwork(externallyPaused = false) {
     ),
   };
 
-  // rotate activity deterministically so it feels live without randomness
+  // Rotate sample activity deterministically for the interface preview.
   const activity: ActivityItem[] = BASE_ACTIVITY.map((a, i) => ({
     ...a,
     age: i <= tick % 4 ? "now" : a.age,

@@ -65,7 +65,7 @@ export default function Navbar() {
             X
           </a>
           <Link href="/app" className="btn-primary !px-4 !py-2 text-[13px]">
-            Launch App
+            Open Demo
           </Link>
         </div>
 
@@ -119,7 +119,7 @@ export default function Navbar() {
               </a>
             </div>
             <Link href="/app" onClick={() => setOpen(false)} className="btn-primary mt-2">
-              Launch App
+              Open Demo
             </Link>
           </div>
         </div>

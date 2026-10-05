@@ -15,14 +15,14 @@ export default function AgentsPage() {
           <Reveal>
             <p className="eyebrow"><span className="inline-block h-px w-6 bg-arvyn-orange" /> Agents</p>
             <h1 className="mt-4 max-w-[720px] text-4xl font-bold tracking-tight md:text-6xl">
-              Verifiable processes, production-grade.
+              A model for verifiable agent processes.
             </h1>
             <p className="mt-5 max-w-[560px] text-[16px] leading-relaxed text-arvyn-muted">
               Four process classes cover the settlement lifecycle: market monitoring, protocol research,
               transaction execution, and strategy coordination through ARVYN.
             </p>
             <div className="mt-7 flex gap-3">
-              <Link href="/docs#agents" className="btn-primary">Build an agent →</Link>
+              <Link href="/docs#agents" className="btn-primary">Explore the agent model →</Link>
               <Link href="/protocol" className="btn-secondary">How runtime works</Link>
             </div>
           </Reveal>
@@ -36,7 +36,7 @@ export default function AgentsPage() {
               <div className="card h-full p-8 transition hover:border-white/20">
                 <div className="flex items-center justify-between">
                   <p className="font-mono text-[11px] tracking-[0.18em] text-arvyn-orange">{a.tag}</p>
-                  <p className="font-mono text-[11px] text-neutral-600">arvyn/{a.id}</p>
+                    <p className="font-mono text-[11px] text-neutral-600">arvyn/{a.id} · preview</p>
                 </div>
                 <h2 className="mt-3 text-2xl font-bold tracking-tight">{a.name}</h2>
                 <p className="mt-2 text-[15px] text-arvyn-muted">{a.description}</p>
@@ -75,7 +75,7 @@ export default function AgentsPage() {
         </div>
       </section>
 
-      <div className="pt-16"><CTA title="Deploy your first process" text="Use the SDK to register, configure policy, and route your first on-chain action." /></div>
+      <div className="pt-16"><CTA title="Explore the process model" text="See how planned agent classes, policy scopes, and guarded execution fit together." /></div>
     </>
   );
 }

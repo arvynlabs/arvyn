@@ -9,21 +9,21 @@ const LAYERS = [
   {
     n: "01",
     title: "Agent Runtime",
-    text: "A framework allowing verifiable execution processes to read state and settle actions on-chain.",
+    text: "A planned framework for verifiable execution processes to read state and settle actions on-chain.",
     bullets: ["Standard process interface & identity", "Tool registry for dApp actions", "Policy engine with spend limits & allowlists"],
     code: ["agent = Arvyn.register({", '  kind: "execution",', '  policy: "guarded",', "});"],
   },
   {
     n: "02",
     title: "Execution Layer",
-    text: "Secure transaction execution between machine processes and smart contracts.",
+    text: "A proposed transaction path between machine processes and smart contracts.",
     bullets: ["Pre-flight simulation & revert checks", "Deterministic signing & nonce management", "Receipts with full audit trail"],
     code: ["await arvyn.execute({", '  agent: agent.id,', '  action: "swap(usdc→eth)",', "});"],
   },
   {
     n: "03",
     title: "Data Layer",
-    text: "Real-time blockchain intelligence and analytics.",
+    text: "A planned data layer for blockchain state and analytics.",
     bullets: ["Indexed blocks, events & liquidity state", "Streaming feeds over WebSocket", "Feature store for model inference"],
     code: ["arvyn.stream.subscribe(", '  "market.liquidity",', "  handler", ");"],
   },
@@ -69,7 +69,7 @@ export default function ProtocolPage() {
                   {l.code.map((line) => (
                     <p key={line} className="text-neutral-300">{line}</p>
                   ))}
-                  <p className="mt-3 font-mono text-[12px] text-neutral-600"># arvyn v1 · robinhood chain</p>
+                  <p className="mt-3 font-mono text-[12px] text-neutral-600"># interface preview · not live</p>
                 </div>
               </div>
             </Reveal>
@@ -88,8 +88,8 @@ export default function ProtocolPage() {
             ))}
           </div>
           <div className="mt-8 flex gap-3">
-            <Link href="/docs#contracts" className="btn-primary">Smart contracts →</Link>
-            <Link href="/docs#api" className="btn-secondary">API reference</Link>
+            <Link href="/docs#contracts" className="btn-primary">Contract model →</Link>
+            <Link href="/docs#api" className="btn-secondary">API concept</Link>
           </div>
         </div>
       </section>

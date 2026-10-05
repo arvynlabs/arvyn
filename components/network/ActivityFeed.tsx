@@ -1,22 +1,22 @@
 "use client";
 
-import { STATUS_STYLE, useLiveNetwork } from "@/lib/network";
+import { STATUS_STYLE, useDemoNetwork } from "@/lib/network";
 
 export default function ActivityFeed({ compact = false, paused = false }: { compact?: boolean; paused?: boolean }) {
-  const { activity, snapshot } = useLiveNetwork(paused);
+  const { activity, snapshot } = useDemoNetwork(paused);
   const rows = compact ? activity.slice(0, 5) : activity;
   return (
     <div className="overflow-hidden rounded-2xl border border-white/10 bg-black/50">
       <div className="flex items-center justify-between border-b border-white/[0.08] px-5 py-3.5">
         <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-neutral-400">
-          Recent process activity
+          Sample process activity
         </p>
         <span className="flex items-center gap-1.5 font-mono text-[11px] text-emerald-400">
           <span className="relative flex h-1.5 w-1.5">
             <span className="absolute h-full w-full animate-ping rounded-full bg-emerald-400 opacity-60" />
             <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
           </span>
-          TESTNET LIVE · block {snapshot.blockHeight.toLocaleString("en-US")}
+          DEMO FEED · sample block {snapshot.blockHeight.toLocaleString("en-US")}
         </span>
       </div>
       {rows.map((a, i) => (

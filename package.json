@@ -2,7 +2,7 @@
   "name": "arvyn",
   "version": "1.0.0",
   "private": true,
-  "description": "ARVYN | Agents. Intelligence. Execution. AI agent infrastructure on Robinhood Chain.",
+  "description": "Public website and product preview for ARVYN on Robinhood Chain.",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

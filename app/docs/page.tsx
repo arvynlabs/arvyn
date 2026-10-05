@@ -7,9 +7,9 @@ const SECTIONS = [
   { id: "introduction", label: "Introduction" },
   { id: "architecture", label: "Architecture" },
   { id: "agents", label: "Agents" },
-  { id: "api", label: "API" },
-  { id: "sdk", label: "SDK" },
-  { id: "contracts", label: "Smart Contracts" },
+  { id: "api", label: "API Concept" },
+  { id: "sdk", label: "SDK Preview" },
+  { id: "contracts", label: "Contract Model" },
   { id: "examples", label: "Examples" },
 ];
 
@@ -57,8 +57,11 @@ export default function DocsPage() {
             <p className="eyebrow">Documentation</p>
             <h1 className="mt-3 text-4xl font-bold tracking-tight md:text-5xl">Build on ARVYN.</h1>
             <p className="mt-4 text-[15.5px] leading-relaxed text-arvyn-muted">
-              Register agents, stream chain data, and route transactions on Robinhood Chain.
+              Explore the planned developer interface for agents, chain data, policy checks, and transaction routing.
             </p>
+            <div className="mt-6 rounded-xl border border-arvyn-orange/30 bg-arvyn-orange/[0.06] p-5 text-sm leading-relaxed text-neutral-300">
+              <strong className="text-white">Development status:</strong> The SDK, API, and smart contracts described below are planned and are not yet published or deployed. Code samples are illustrative only.
+            </div>
           </Reveal>
 
           <div className="mt-12 space-y-14">
@@ -68,45 +71,45 @@ export default function DocsPage() {
                 ARVYN provides a standard execution path for on-chain agents. Agents read blockchain
                 state, prepare actions, pass policy checks, and submit transactions through smart contracts.
               </p>
-              <Code>{`npm install @arvyn/sdk\n# → connect in 3 lines`}</Code>
+              <Code>{`Status: interface preview\nSDK package: not published\nPublic API: not available\nContracts: not deployed`}</Code>
             </section>
 
             <section id="architecture" className="scroll-mt-28">
               <h2 className="text-2xl font-bold">Architecture</h2>
               <p className="mt-3 text-[15px] leading-relaxed text-neutral-300">
-                Perception ingests chain data → Intelligence plans → Execution settles via guarded routers.
+                The proposed architecture moves from chain data to planning, policy checks, and guarded execution.
               </p>
               <Code>{`Perception   → blocks · events · liquidity\nIntelligence → scoring · planning · policy\nExecution    → simulate · sign · settle`}</Code>
             </section>
 
             <section id="agents" className="scroll-mt-28">
               <h2 className="text-2xl font-bold">Agents</h2>
-              <p className="mt-3 text-[15px] text-neutral-300">Register a typed agent with an explicit policy scope.</p>
-              <Code>{`import { Arvyn } from "@arvyn/sdk";\n\nconst agent = await Arvyn.register({\n  kind: "execution",\n  policy: { maxSpend: "500 USDC", allowlist: ["0x..."] },\n});`}</Code>
+              <p className="mt-3 text-[15px] text-neutral-300">The planned interface registers a typed agent with an explicit policy scope.</p>
+              <Code>{`// Planned interface. Package not yet published.\nimport { Arvyn } from "@arvyn/sdk";\n\nconst agent = await Arvyn.register({\n  kind: "execution",\n  policy: { maxSpend: "500 USDC", allowlist: ["0x..."] },\n});`}</Code>
             </section>
 
             <section id="api" className="scroll-mt-28">
-              <h2 className="text-2xl font-bold">API</h2>
-              <p className="mt-3 text-[15px] text-neutral-300">REST and WebSocket interfaces for data, planning, and execution status.</p>
-              <Code>{`GET  /v1/market/liquidity?chain=robinhood\nPOST /v1/execute  { agent, action, params }\nWS   /v1/stream  { topics: ["market.*", "tx.*"] }`}</Code>
+              <h2 className="text-2xl font-bold">API Concept</h2>
+              <p className="mt-3 text-[15px] text-neutral-300">The planned API will expose data, planning, and execution status over REST and WebSocket interfaces.</p>
+              <Code>{`# Proposed endpoints. Not live.\nGET  /v1/market/liquidity?chain=robinhood\nPOST /v1/execute  { agent, action, params }\nWS   /v1/stream  { topics: ["market.*", "tx.*"] }`}</Code>
             </section>
 
             <section id="sdk" className="scroll-mt-28">
-              <h2 className="text-2xl font-bold">SDK</h2>
-              <p className="mt-3 text-[15px] text-neutral-300">A TypeScript client with retries, simulation, and typed actions.</p>
-              <Code>{`const tx = await arvyn.execute({\n  agent: agent.id,\n  action: "rebalance",\n  params: { pool: "USDC/ETH", target: 0.5 },\n});\nconsole.log(tx.hash); // 0x7a…f3`}</Code>
+              <h2 className="text-2xl font-bold">SDK Preview</h2>
+              <p className="mt-3 text-[15px] text-neutral-300">The planned TypeScript client will support retries, simulation, and typed actions.</p>
+              <Code>{`// Illustrative API. Not available on npm.\nconst tx = await arvyn.execute({\n  agent: agent.id,\n  action: "rebalance",\n  params: { pool: "USDC/ETH", target: 0.5 },\n});\nconsole.log(tx.hash);`}</Code>
             </section>
 
             <section id="contracts" className="scroll-mt-28">
-              <h2 className="text-2xl font-bold">Smart Contracts</h2>
-              <p className="mt-3 text-[15px] text-neutral-300">Policy routers mediate agent calls. Each agent is limited to its configured allowance and contract scope.</p>
-              <Code>{`ArvynRouter   0x… (execution entrypoint)\nPolicyGuard  0x… (allowances + limits)\nAgentRegistry 0x… (identity + metadata)`}</Code>
+              <h2 className="text-2xl font-bold">Contract Model</h2>
+              <p className="mt-3 text-[15px] text-neutral-300">The proposed policy routers mediate agent calls and limit each agent to a configured allowance and contract scope.</p>
+              <Code>{`Planned contracts. No addresses are deployed.\nArvynRouter    execution entrypoint\nPolicyGuard    allowances and limits\nAgentRegistry  identity and metadata`}</Code>
             </section>
 
             <section id="examples" className="scroll-mt-28">
               <h2 className="text-2xl font-bold">Examples</h2>
-              <p className="mt-3 text-[15px] text-neutral-300">Monitor a pool and rebalance when liquidity shifts.</p>
-              <Code>{`arvyn.stream.subscribe("market.liquidity", async (e) => {\n  if (e.spread > 0.8) {\n    await arvyn.execute({ agent: agent.id, action: "rebalance" });\n  }\n});`}</Code>
+              <p className="mt-3 text-[15px] text-neutral-300">Illustrative pseudocode for monitoring a pool and preparing a rebalance.</p>
+              <Code>{`// Concept only. This interface is not live.\narvyn.stream.subscribe("market.liquidity", async (event) => {\n  if (event.spread > 0.8) {\n    await arvyn.execute({ agent: agent.id, action: "rebalance" });\n  }\n});`}</Code>
             </section>
           </div>
         </div>

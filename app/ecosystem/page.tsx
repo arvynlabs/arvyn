@@ -57,7 +57,7 @@ export default function EcosystemPage() {
         <div className="shell">
           <SectionHeading eyebrow="Participants" title="Built for three sides of the market." />
           <div className="mt-8 grid gap-4 md:grid-cols-3">
-            {[["Builders", "Ship agent-enabled apps with the SDK and open action registry."], ["Operators", "Run agent infrastructure and earn ARVN for reliable execution."], ["Applications", "Expose actions to the agent network and receive routed activity."]].map(([t, d], i) => (
+            {[["Builders", "Design agent-enabled apps around the planned SDK and action registry."], ["Operators", "Explore the future role of infrastructure operators in reliable execution."], ["Applications", "Prepare actions that could be exposed to the planned agent network."]].map(([t, d], i) => (
               <Reveal key={t} delay={i * 0.06}>
                 <div className="card h-full p-7"><p className="text-lg font-bold">{t}</p><p className="mt-2 text-sm leading-relaxed text-arvyn-muted">{d}</p></div>
               </Reveal>
@@ -66,7 +66,7 @@ export default function EcosystemPage() {
         </div>
       </section>
 
-      <div className="pt-16"><CTA title="Plug into the ecosystem" text="Expose an action, run an operator node, or launch an app that uses ARVYN agents." /></div>
+      <div className="pt-16"><CTA title="Explore the ecosystem model" text="Review how builders, operators, applications, and agents are designed to work together." /></div>
     </>
   );
 }

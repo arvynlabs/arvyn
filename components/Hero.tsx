@@ -20,7 +20,7 @@ export default function Hero() {
             <span className="h-1.5 w-1.5 rounded-full bg-arvyn-orange" />
             AI execution infrastructure for Robinhood Chain
             <span className="hidden text-neutral-600 sm:inline">·</span>
-            <span className="hidden text-neutral-400 sm:inline">Testnet</span>
+            <span className="hidden text-neutral-400 sm:inline">Product Preview</span>
           </motion.div>
 
           <motion.h1
@@ -51,7 +51,7 @@ export default function Hero() {
             className="mt-8 flex flex-wrap gap-3"
           >
             <Link href="/app" className="btn-primary">
-              Launch App →
+              Open Demo →
             </Link>
             <Link href="/docs" className="btn-secondary">
               Read Docs
@@ -64,6 +64,9 @@ export default function Hero() {
             transition={{ duration: 0.7, delay: 0.35 }}
           >
             <MetricsStrip />
+            <p className="mt-3 text-[12px] leading-relaxed text-neutral-500">
+              Interface preview. Metrics are generated in the browser and are not live chain telemetry.
+            </p>
             <p className="mt-4 font-mono text-[12px] text-neutral-500">
               <strong className="text-white">4</strong> process classes · <strong className="text-white">3</strong>-stage pipeline · <strong className="text-white">$ARVN</strong> settlement credit
             </p>

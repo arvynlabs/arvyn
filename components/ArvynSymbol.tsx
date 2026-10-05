@@ -104,8 +104,8 @@ export default function ArvynSymbol() {
       <div className="absolute inset-x-4 bottom-4 rounded-xl border border-white/10 bg-black/70 p-4 font-mono text-[12px] backdrop-blur">
         <div className="flex items-center gap-2 text-neutral-500">
           <span className="h-2 w-2 rounded-full bg-arvyn-orange" />
-          arvyn · execution trace
-          <span className="ml-auto">block 84,102</span>
+          arvyn · sample execution trace
+          <span className="ml-auto">demo data</span>
         </div>
         <div className="mt-3 space-y-1.5 text-neutral-300">
           <p><span className="text-neutral-500">perception</span> · 1,284 events indexed</p>
@@ -114,7 +114,7 @@ export default function ArvynSymbol() {
         </div>
       </div>
       <div className="absolute left-4 top-4 rounded-full border border-white/10 bg-black/60 px-3 py-1 font-mono text-[11px] text-neutral-300 backdrop-blur">
-        ARVYN / LIVE NETWORK
+        ARVYN / INTERFACE PREVIEW
       </div>
     </div>
   );

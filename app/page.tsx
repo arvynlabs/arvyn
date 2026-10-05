@@ -24,8 +24,8 @@ const STEPS = [
   {
     n: "03",
     name: "EXECUTION",
-    text: "Guarded routers submit transactions to smart contracts.",
-    detail: "Each transaction is simulated, signed within policy, settled, and recorded with a receipt.",
+    text: "Guarded routers are designed to submit transactions to smart contracts.",
+    detail: "The planned flow simulates each transaction, signs it within policy, and records the resulting receipt.",
   },
 ];
 
@@ -121,7 +121,7 @@ export default function Home() {
                   <h3 className="mt-2 text-[17px] font-bold">{a.name}</h3>
                   <p className="mt-2 text-sm leading-relaxed text-arvyn-muted">{a.description}</p>
                   <div className="mt-5 border-t border-white/[0.07] pt-4">
-                    <p className="font-mono text-[11px] text-neutral-500">arvyn/{a.id} · active</p>
+                    <p className="font-mono text-[11px] text-neutral-500">arvyn/{a.id} · preview</p>
                   </div>
                 </div>
               </Reveal>
@@ -137,7 +137,7 @@ export default function Home() {
             <SectionHeading
               eyebrow="Execution layer"
               title="Built on Robinhood Chain."
-              text="ARVYN settles agent transactions on Robinhood Chain, giving financial applications fast execution and a clear on-chain record."
+              text="ARVYN is designed to settle agent transactions on Robinhood Chain with a clear on-chain record."
             />
             <div className="mt-8 space-y-3">
               {[
@@ -160,8 +160,8 @@ export default function Home() {
           <Reveal delay={0.1}>
             <ExecutionTrace />
             <div className="mt-5 flex gap-3">
-              <Link href="/app" className="btn-primary !px-4 !py-2 text-[13px]">Open live dashboard →</Link>
-              <Link href="/docs" className="btn-secondary !px-4 !py-2 text-[13px]">SDK →</Link>
+              <Link href="/app" className="btn-primary !px-4 !py-2 text-[13px]">Open dashboard demo →</Link>
+              <Link href="/docs#sdk" className="btn-secondary !px-4 !py-2 text-[13px]">SDK preview →</Link>
             </div>
           </Reveal>
         </div>
@@ -181,23 +181,23 @@ export default function Home() {
           <Reveal delay={0.1} className="mt-4">
             <div className="flex flex-wrap gap-3">
               <Link href="/ecosystem" className="btn-secondary !py-2.5 text-[13px]">Ecosystem map →</Link>
-              <Link href="/app" className="btn-secondary !py-2.5 text-[13px]">Watch it live →</Link>
+              <Link href="/app" className="btn-secondary !py-2.5 text-[13px]">View demo flow →</Link>
             </div>
           </Reveal>
         </div>
       </section>
 
-      {/* Live network activity */}
+      {/* Interface preview */}
       <section className="border-t border-white/[0.06] bg-[#0a0a0a] py-20 md:py-28">
         <div className="shell">
           <div className="flex flex-wrap items-end justify-between gap-6">
             <SectionHeading
-              eyebrow="Testnet activity"
-              title="Current network activity."
-              text="Review process status, execution traces, and recent testnet settlements."
+              eyebrow="Interface preview"
+              title="Explore the execution flow."
+              text="Review sample process states, execution traces, and illustrative settlement data."
             />
             <Reveal>
-              <Link href="/app" className="btn-primary !py-2.5 text-[13px]">Open dashboard →</Link>
+              <Link href="/app" className="btn-primary !py-2.5 text-[13px]">Open dashboard demo →</Link>
             </Reveal>
           </div>
           <Reveal className="mt-12">

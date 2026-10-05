@@ -1,38 +1,59 @@
-# ARVYN | Agents. Intelligence. Execution.
+# ARVYN
 
-AI agent infrastructure on Robinhood Chain. Next.js 14 + TypeScript + Tailwind + Framer Motion.
+ARVYN is an early-stage product concept for controlled AI-agent execution on Robinhood Chain.
 
-## Run
+[Website](https://www.arvynagents.xyz/) · [X](https://x.com/arvynxyz)
 
-Requires Node.js 18+.
+## Current status
+
+This repository contains the public ARVYN website and an interactive product preview. It does not yet contain a deployed protocol, published SDK, public API, smart contracts, or token contract.
+
+The dashboard, transaction hashes, block numbers, process activity, and network metrics are generated in the browser for interface demonstration. They are not live blockchain telemetry.
+
+| Available now | Planned |
+| --- | --- |
+| Public website | TypeScript SDK |
+| Product and architecture preview | Public API and data streams |
+| Interactive dashboard demo | Deployed policy and routing contracts |
+| Open website source | Verifiable testnet integrations |
+
+Examples in the documentation describe the intended developer experience. Package names, endpoints, and contract addresses shown there are illustrative and should not be used in production.
+
+## Local development
+
+Requires Node.js 18 or later.
 
 ```bash
-cd arvyn
 npm install
-npm run dev     # http://localhost:3000
-npm run build && npm start
+npm run dev
 ```
 
-## Structure
+Open [http://localhost:3000](http://localhost:3000).
 
-```
-app/
-  layout.tsx        # fonts, navbar, footer
-  page.tsx          # landing
-  agents/           # agent classes + coordination
-  protocol/         # runtime / execution / data layers
-  ecosystem/        # ecosystem map flow
-  docs/             # developer docs
-  token/            # $ARVN dashboard
-components/
-  Navbar.tsx Footer.tsx Logo.tsx Hero.tsx
-  ArvynSymbol.tsx   # canvas network animation
-  Reveal.tsx SectionHeading.tsx CTA.tsx
-lib/site.ts         # nav + content data
+Create a production build with:
+
+```bash
+npm run build
+npm start
 ```
 
-## Design
+## Technology
 
-- bg `#070707`, panel `#111111`, accent `#FF5A00`, ink `#F5F5F5`, muted `#8A8A8A`
-- Inter + JetBrains Mono, thin `white/8` borders, grid backdrops
-- Subtle motion only: fade/slide via `Reveal`, hover lifts, canvas drift
+- Next.js 14 and React 18
+- TypeScript
+- Tailwind CSS
+- Framer Motion
+
+## Project structure
+
+```text
+app/                 routes and page content
+components/          shared interface components
+components/network/  dashboard preview components
+lib/                 navigation, content, and demo telemetry
+public/              brand assets
+```
+
+## License
+
+Released under the [MIT License](LICENSE).
